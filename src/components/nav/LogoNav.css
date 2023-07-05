@@ -1,0 +1,53 @@
+.logo-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.bolt{
+    color: rgb(255, 187, 0);
+    font-size: 2.5em;
+}
+
+.line1{
+    font-size: 1.3em;
+    font-weight: 600;
+    transform: translateY(3px);
+    color: white;
+
+}
+.line2{
+    font-size: 15px;
+    font-weight: 500;
+    transform: translateY(-8px);
+    color: black;
+}
+
+
+
+.logo-nav-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.bolt-2{
+    color: rgb(255, 187, 0);
+    font-size: 2.5em;
+}
+
+.line1-2{
+    font-size: 1.3em;
+    font-weight: 600;
+    transform: translateY(3px);
+    color: white;
+
+}
+.line2-2{
+    font-size: 15px;
+    font-weight: 500;
+    transform: translateY(-8px);
+    color: black;
+}

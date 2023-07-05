@@ -5,7 +5,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PinDropIcon from '@mui/icons-material/PinDrop';
-import Logo from "../../img/Logo_transparente.png"
+import LogoNav from './LogoNav';
+import LogoNav2 from './LogoNav2';
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ function Nav() {
   </div>
   <div className='navbar-main'>
     <div className="mega-navbar-block-1">
-      <img src={Logo} width={70} height={70} alt="" />
+      <LogoNav/> <LogoNav2/>
       <div className='nav-input-container'>
         <input className='nav-input' type="text" placeholder='¿Que Necesitas?' />
         <SearchIcon htmlColor='black' />
