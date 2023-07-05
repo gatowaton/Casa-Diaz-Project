@@ -2,7 +2,7 @@
   "name": "genproject1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gatowaton/github.io/Casa-Diaz-Project",
+  "homepage": "http://gatowaton.github.io/Casa-Diaz-Project",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
