@@ -1,0 +1,11 @@
+.carousel-inner {
+    background-color: rgba(19, 17, 17, 0.541);
+    height: 500px;
+    display: flex;
+  }
+
+  .carousel-item img {
+    object-fit:contain;
+    height: 80%;
+    width: 80%;
+  }
