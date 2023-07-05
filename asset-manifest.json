@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/github.io/Casa-Diaz-Project/static/css/main.3a180ba4.css",
+    "main.js": "/github.io/Casa-Diaz-Project/static/js/main.c8e12e3e.js",
+    "static/media/image1.png": "/github.io/Casa-Diaz-Project/static/media/image1.6ac9750986a9cf0c0a98.png",
+    "static/media/Logo_transparente.png": "/github.io/Casa-Diaz-Project/static/media/Logo_transparente.99850b1765587bdcc99c.png",
+    "static/media/bobina.jpg": "/github.io/Casa-Diaz-Project/static/media/bobina.ac3cdeea556024c99b17.jpg",
+    "static/media/interruptor.png": "/github.io/Casa-Diaz-Project/static/media/interruptor.3dd89aa67a77b2a35c4d.png",
+    "index.html": "/github.io/Casa-Diaz-Project/index.html",
+    "main.3a180ba4.css.map": "/github.io/Casa-Diaz-Project/static/css/main.3a180ba4.css.map",
+    "main.c8e12e3e.js.map": "/github.io/Casa-Diaz-Project/static/js/main.c8e12e3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a180ba4.css",
+    "static/js/main.c8e12e3e.js"
+  ]
+}
