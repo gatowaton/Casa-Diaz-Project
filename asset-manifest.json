@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/Casa-Diaz-Project/static/css/main.3a180ba4.css",
-    "main.js": "/Casa-Diaz-Project/static/js/main.133118d4.js",
+    "main.css": "/Casa-Diaz-Project/static/css/main.32d04c2b.css",
+    "main.js": "/Casa-Diaz-Project/static/js/main.4fd96e58.js",
     "static/media/image1.png": "/Casa-Diaz-Project/static/media/image1.6ac9750986a9cf0c0a98.png",
-    "static/media/Logo_transparente.png": "/Casa-Diaz-Project/static/media/Logo_transparente.99850b1765587bdcc99c.png",
     "static/media/bobina.jpg": "/Casa-Diaz-Project/static/media/bobina.ac3cdeea556024c99b17.jpg",
     "static/media/interruptor.png": "/Casa-Diaz-Project/static/media/interruptor.3dd89aa67a77b2a35c4d.png",
     "index.html": "/Casa-Diaz-Project/index.html",
-    "main.3a180ba4.css.map": "/Casa-Diaz-Project/static/css/main.3a180ba4.css.map",
-    "main.133118d4.js.map": "/Casa-Diaz-Project/static/js/main.133118d4.js.map"
+    "main.32d04c2b.css.map": "/Casa-Diaz-Project/static/css/main.32d04c2b.css.map",
+    "main.4fd96e58.js.map": "/Casa-Diaz-Project/static/js/main.4fd96e58.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a180ba4.css",
-    "static/js/main.133118d4.js"
+    "static/css/main.32d04c2b.css",
+    "static/js/main.4fd96e58.js"
   ]
 }
