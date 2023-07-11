@@ -1,6 +1,4 @@
 import React from 'react'
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle";
 import Img from "../../img/image1.png";
 import "./Slider.css"
 
