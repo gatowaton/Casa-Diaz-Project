@@ -6,9 +6,9 @@ function LogoNav2() {
   return (
     <div className='logo-nav-2'>
     <div className='bolt-2'>
-    <ElectricBoltRoundedIcon fontSize='100px'/>
+    <ElectricBoltRoundedIcon fontSize='200'/>
     </div>
-    <div>
+    <div className='logo-title'>
         <div className='line1-2'>
         <span>Casa Diaz</span><br/>
         </div>

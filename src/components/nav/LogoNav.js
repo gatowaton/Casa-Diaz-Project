@@ -6,7 +6,7 @@ function LogoNav() {
   return (
     <div className='logo-nav'>
         <div className='bolt'>
-        <ElectricBoltRoundedIcon/>
+        <ElectricBoltRoundedIcon fontSize='100px'/>
         </div>
         <div>
             <div className='line1'>
