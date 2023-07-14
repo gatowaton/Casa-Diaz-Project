@@ -35,6 +35,7 @@ function Nav() {
 <nav className={`mega-navbar ${isScrolling ? "navbar-main scrolling" : ""}`}>
   <div className='mega-navbar-block-0'>
     <div className='mega-navbar-block-0-1'>
+      Dashboard
       <div>
         <PinDropIcon />
         <samp>Sucursales</samp>

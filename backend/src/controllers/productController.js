@@ -8,7 +8,10 @@ productController.getProducts = async (req, res) => {
     res.json(products);
 };
 
-productController.getProduct = (req, res) => res.json({msg: "product"});
+productController.getProduct = async (req, res) => {
+    const product = await ProductModel.findById(req.params.id) //devulve un producto
+    res.json(product)
+};
 
 productController.createProduct = async(req, res) => {
     const { title, description, price, stock, image, brand } = req.body;
@@ -25,9 +28,23 @@ productController.createProduct = async(req, res) => {
     res.json({msg: "product created"})
 };
 
-productController.updateProduct = (req, res) => res.json({msg: "product"});
+productController.updateProduct = async (req, res) => {
+    const {title, description, price, stock, image, brand} = req.body;
+    await ProductModel.findByIdAndUpdate(req.params.id,{
+        title, 
+        description, 
+        price, 
+        stock, 
+        image, 
+        brand
+    })
+    res.json({msg: "product updated"})
+};
 
-productController.deleteProduct = (req, res) => res.json({msg: "product"});
+productController.deleteProduct = async (req, res) => {
+    await ProductModel.findByIdAndDelete(req.params.id);
+    res.json({msg: "product deleted"})
+};
 
 
 module.exports = productController;
