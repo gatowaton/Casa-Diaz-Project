@@ -1,0 +1,49 @@
+.section_img {
+   background-image: url(../../img/Rectangle\ 36.png);
+   height: 18.75em;
+}
+.section_products_six {
+   background-color: #7a8b99;
+   border-radius: 25px;
+   width: 75em;
+   height: 30em;
+}
+.btn_six {
+   border-radius: 25px;
+   background-color: #facd03;
+   color: black;
+   font-size: 10px;
+   width: 98px;
+   height: 25px;
+   border: none;
+}
+.section_img_new_line {
+   background-image: url(../../img/Sectionnuevalinea.png);
+   height: 34em;
+   margin-top: 2em;
+}
+
+.btn_new_line {
+   border-radius: 25px;
+   background-color: #facd03;
+   color: black;
+   font-size: 18px;
+   width: 196px;
+   height: 46px;
+   border: none;
+}
+.section_novedades {
+   background-image: url(../../img/Novedades.png);
+   height: 34em;
+}
+.section_condiciones {
+   margin-top: 5em;
+}
+.icons-size {
+   color: #facd03;
+   font-size: 5em;
+}
+.section_footer {
+   background-color: #2e3532;
+   height: 29em;
+}
