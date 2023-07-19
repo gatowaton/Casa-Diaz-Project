@@ -1,6 +1,5 @@
-const productController = {};
-
 const ProductModel = require("../models/productModel");
+const productController = {};
 
 productController.getProducts = async (req, res) => {
     //todo en la coleccion

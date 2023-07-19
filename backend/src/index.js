@@ -1,7 +1,10 @@
 // dotenv debe iniciar primero
 require('dotenv').config();
 const app = require('./app');
-require("./database/database");
+// require("./database/database");
+const connectDB = require("./database/database")
+
+
 
 
 async function main(){
@@ -13,4 +16,5 @@ async function main(){
 //env config
 
 // Connecting to database
+connectDB();
 main();
