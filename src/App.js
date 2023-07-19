@@ -10,6 +10,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Dashboard from "./pages/admin/Dashboard";
+import Footer from "./components/footer/Footer";
 
 function App() {
    return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Dashboard />} />
          </Routes>
+         <Footer />
       </BrowserRouter>
    );
 }
