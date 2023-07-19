@@ -10,7 +10,7 @@ const Company = () => {
          <img src={fotolocal} className="rounded mx-auto d-block p-4" alt="..."></img>
          <div className="fs-4 my-5">
             <p>
-               <b>Casa Diaz SPA</b>
+               <b>Casa Díaz SPA</b>
             </p>
             <p>
                Con una experiencia previa de mas de 6 años en la industria, nuestro compromiso es brindar soluciones
