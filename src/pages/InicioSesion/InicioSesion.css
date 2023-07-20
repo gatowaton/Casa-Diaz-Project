@@ -1,0 +1,33 @@
+h5 {
+    text-align:start;
+    margin-left: 120px;  
+}
+
+h1 {
+    text-align:initial;
+    margin-left: 120px;
+}
+
+.col-lg-6 {
+    background-color: rgb(238, 228, 228);
+    width: 50%;
+    padding: 50px;
+    border-radius: 5%;
+    margin-left:120px;
+}
+
+label{
+    font-weight:bold;
+    font-size:20px;
+}
+input {
+    width: 80% ;
+    height:40px;
+    
+}
+
+.container1{
+    display: flex;
+    margin-bottom: 10px;
+}
+

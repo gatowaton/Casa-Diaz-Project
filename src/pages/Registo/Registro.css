@@ -1,0 +1,45 @@
+
+
+.jumbotron.jumbotron-fluid2 {
+    background: linear-gradient(to bottom,rgba(0,0,0,0,3) 0%, rgba(0,0,0,0,3) 70%);
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+}
+
+
+label {
+    font-size: 18px;
+    padding: 8px;
+}
+
+.row.g-3 {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.col-md-7 {
+    text-align: center;  
+    margin: auto auto; 
+}
+
+.form-check {
+    text-align:justify;
+    margin-left: 300px;
+}
+
+.form-label{
+    font-size: x-large;
+}
+.btn.btn-secondary{
+    margin-left: 400px;
+}
+
+
+
+
+
+

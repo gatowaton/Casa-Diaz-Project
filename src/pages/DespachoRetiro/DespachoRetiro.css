@@ -1,0 +1,31 @@
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.jumbotron.jumbotron-fluid {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 70%), url(Imagen/linea_energia_renovable_01-v2.png) no-repeat center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;  
+}
+
+.display-4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cont-d{
+    font-size: 25px;
+    margin: 100px 100px;
+    text-align: justify;
+}
+.cont-r {
+    font-size: 25px;
+    margin: 100px 100px;
+    text-align: justify;
+}
+
