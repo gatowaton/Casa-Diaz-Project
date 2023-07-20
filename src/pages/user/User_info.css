@@ -1,0 +1,78 @@
+/* Container principal */
+/*  Solo aplicando para ver forma contenedor*/
+.container-info-usuario{
+    border-radius: 20px;
+    background-color: bisque;
+    align-items: center;
+}
+/* CSS Columna izauierda */
+/* borde redondo, altura al contenido y color fondo */
+.nav-panel-info-usuario{
+    border-radius: 20px;
+    height: fit-content;
+    background-color:#2E3532;
+}
+/* cambiando color letras panel izquierdo */
+.texto-panel-izq-cuenta{
+    color: white;
+}
+/* Agregando lineas al panel izquierdo */
+.links-panel-info-usuario li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+/* CSS columna derecha */
+
+/* borde redondo,color fondo, padding de contenedor a inputs */
+.form-info-cuenta{
+    width:auto;
+    border-radius: 20px;
+    background-color:#7A8B99;
+    padding: 20px;
+}
+/* repitiendo pero en el sugundo */
+.form-direccion-facturacion-usuario{
+    width:auto;
+    border-radius: 20px;
+    background-color: #7A8B99;
+    padding: 20px;
+}
+/* repitiendo pero en el tercero */
+.form-direccion-envio-usuario{
+    width:auto;
+    border-radius: 20px;
+    background-color: #7A8B99;
+    padding: 20px;
+}
+
+/* haciendo que el label quede a la izquierda */
+.text-label-form-user{
+    display: flex;
+    align-items: center;
+}
+
+/* DUDAS SI ES QUE FUNCIONA, margen con el cuadro, alineando a la derecha label */
+/* flex, no estoy seguro, volver a probar */
+.text-label{
+    margin-right: 10px;
+    flex: 1;
+    text-align: right;
+}
+/* ajustando cuadro blanco con flex, DUDA */
+.casilla-form-user-info{
+    flex: 4;
+}
+
+/* Alineando botones al final a la derecha, en 3 distintos */
+.botones-info-usuario{
+    display: flex;
+    justify-content: flex-end;
+}
+.botones-direccion-facturacion-usuario{
+    display: flex;
+    justify-content: flex-end;
+}
+.botones-direccion-envio-usuario{
+    display: flex;
+    justify-content: flex-end;
+}

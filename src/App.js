@@ -1,11 +1,15 @@
-import "./App.css";
-// import Nav from "./components/nav/Nav"
+//import './App.css';
+//import Contact from './pages/contact/Contact';
+//import CambiosDevoluciones from './pages/cambiosYDevoluciones/CambiosDevoluciones.js';
+//import Nav from "./components/nav/Nav"
 // import ProductCard from './components/productCard/ProductCard';
 // import ProductCard2 from './components/productCard/ProductCard2';
 // import Slider from "./components/slider/Slider"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import ProductView from './pages/productView/ProductView';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+
+
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
@@ -27,6 +31,7 @@ function App() {
          <Footer />
       </BrowserRouter>
    );
+
 }
 
 export default App;
