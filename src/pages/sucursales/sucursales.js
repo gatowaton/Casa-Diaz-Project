@@ -20,7 +20,7 @@ function Sucursales(){
               direccion={sucursal.direccion}
               horario={sucursal.horario}
             />
-            <Mapa latitud={sucursal.latitud} longitud={sucursal.longitud} />
+            
           </div>
         );
       };
