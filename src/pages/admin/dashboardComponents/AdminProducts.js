@@ -10,14 +10,13 @@ function AdminProducts() {
     fetchProducts();
   }, []);
 
-  const fetchProducts = () => {
-    axios.get('http://localhost:4000/api/product/')
-      .then(response => {
-        setProducts(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get('http://localhost:4000/api/product/');
+      setProducts(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleProductCreated = (newProduct) => {
@@ -33,14 +32,14 @@ function AdminProducts() {
           <div className='product-card-admin' key={product.id}>
             <img src={product.image} alt="" />
             <div>
-                <h2>{product.title}</h2>
-                <p>Precio: ${product.price}</p>
-                <p>Marca: {product.brand}</p>
-                <strong>Stock: {product.stock}</strong>
+              <h2>{product.title}</h2>
+              <p>Precio: ${product.price}</p>
+              <p>Marca: {product.brand}</p>
+              <strong>Stock: {product.stock}</strong>
             </div>
             <div className='product-data-2'>
-            <p>{product.date}</p> 
-            <strong>id: {product._id}</strong>
+              <p>{product.date}</p> 
+              <strong>id: {product._id}</strong>
             </div>
           </div>
         ))}

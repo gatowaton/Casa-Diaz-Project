@@ -18,25 +18,24 @@ function ProductCreator({ onProductCreated }) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post('http://localhost:4000/api/product/', product)
-      .then(response => {
-        console.log('Product created successfully!');
-        onProductCreated(response.data);
-        setProduct({
-          title: '',
-          description: '',
-          price: 0,
-          image: '',
-          brand: '',
-          stock: 0
-        });
-      })
-      .catch(error => {
-        console.error(error);
-        // Manejar el error si es necesario
+    try {
+      const response = await axios.post('http://localhost:4000/api/product/', product);
+      console.log('Product created successfully!');
+      onProductCreated(response.data);
+      setProduct({
+        title: '',
+        description: '',
+        price: 0,
+        image: '',
+        brand: '',
+        stock: 0
       });
+    } catch (error) {
+      console.error(error);
+      // Handle the error if necessary
+    }
   };
 
   return (
