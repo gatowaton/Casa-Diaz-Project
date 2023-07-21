@@ -2,12 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-<<<<<<< HEAD
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-=======
->>>>>>> v2
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Home from "./pages/home/Home";
@@ -19,6 +13,7 @@ import Company from "./pages/Company/Company";
 import UserInfo from "./pages/user/UserInfo";
 import Contact from "./pages/contact/Contact";
 import CambiosDevoluciones from "./pages/cambiosYDevoluciones/CambiosDevoluciones";
+import Sucursales from "./pages/sucursales/sucursales";
 
 function App() {
    return (
@@ -32,6 +27,7 @@ function App() {
             <Route path="/usuario" element={<UserInfo />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
+            <Route path="/sucursales" element={<Sucursales/>} />
          </Routes>
          <Footer />
       </BrowserRouter>

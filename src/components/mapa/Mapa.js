@@ -11,7 +11,7 @@ const Mapa = ({ latitud, longitud }) => {
       />
 
       {/* Agregamos un marcador en la posición indicada por latitud y longitud */}
-      <Marker position={[-33.4015008, -70.7154977]}>
+      <Marker position={[latitud, longitud]}>
         {/* Al hacer clic en el marcador, se muestra un Popup */}
         <Popup>Ubicación de la tienda</Popup>
       </Marker>
