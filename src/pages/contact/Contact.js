@@ -105,7 +105,7 @@ function Contact() {
                      </button>
                   </form>
                </div>
-               <div className="col-6">
+               <div className="col-6 columna-derecha-contact">
                   <h1>Ubícanos en</h1>
                   <h4>Casa Matriz y Salón de ventas</h4>
                   <p>Avenida Balmaceda 4252, local A</p>
