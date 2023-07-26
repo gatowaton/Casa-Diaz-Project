@@ -15,7 +15,7 @@ function Home() {
          <img src={bannerimg} className="rounded mx-auto d-block p-4" alt="..."></img>
          <div className="section_img">
             <p className="text-center fs-1 fw-bold text-light p-4">
-               Todo en materiales electricos e iluminacion para tus proyectos
+               Todo en materiales eléctricos e iluminacion para tus proyectos
             </p>
             <div className="section_img_filter d-flex container">
                <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
