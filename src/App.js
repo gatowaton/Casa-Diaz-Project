@@ -13,23 +13,30 @@ import Company from "./pages/Company/Company";
 import UserInfo from "./pages/user/UserInfo";
 import Contact from "./pages/contact/Contact";
 import CambiosDevoluciones from "./pages/cambiosYDevoluciones/CambiosDevoluciones";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import { AuthProvider } from "./Context/AuthContext";
 
 function App() {
    return (
+      <AuthProvider>
       <BrowserRouter>
-         <Nav />
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/carrito" element={<ShoppingCart />} />
+             <Nav  />
+           <Routes>
+              <Route path="/" element={<Home  />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+              <Route path="/carrito" element={<ShoppingCart />} />
             <Route path="/empresa" element={<Company />} />
             <Route path="/admin" element={<Dashboard />} />
             <Route path="/usuario" element={<UserInfo />} />
             <Route path="/contacto" element={<Contact />} />
-            <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
-         </Routes>
+            <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones  />} />
+           </Routes>
          <Footer />
-      </BrowserRouter>
-   );
+        </BrowserRouter>
+     </AuthProvider>
+  );
 }
 
 export default App;
