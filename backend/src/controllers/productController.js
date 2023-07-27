@@ -23,8 +23,10 @@ productController.createProduct = async(req, res) => {
         brand: brand
     })
 
-    await newProduct.save();  // guardar en db
-    res.json({msg: "product created"})
+    // await newProduct.save();  // guardar en db
+    // res.json({msg: "product created"})
+    const savedProduct = await newProduct.save()
+    res.json(savedProduct)
 };
 
 productController.updateProduct = async (req, res) => {

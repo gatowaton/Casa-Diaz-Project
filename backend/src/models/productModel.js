@@ -1,4 +1,5 @@
 const { Schema, model, default: mongoose } = require("mongoose");
+const userModel = require("./userModel");
 
 const productSchema = new Schema({
     title: {
@@ -27,7 +28,7 @@ const productSchema = new Schema({
     date : {
         type: Date,
         default: Date.now
-    }
+    },
 },{
     timestamps: true
 })
