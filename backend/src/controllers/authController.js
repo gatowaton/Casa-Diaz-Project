@@ -62,4 +62,19 @@ const logout = (req, res) =>{
     return res.sendStatus(200);
 }
 
-module.exports = { login, register, logout };
+const profile = async (req, res) =>{
+  const userFound = await UserModel.findById(req.user.id)
+
+  if(!userFound) return res.status(400).json({msg: "not found"})
+
+  return res.json({
+    id: userFound._id,
+    username: userFound.username,
+    email: userFound.email,
+    createdAt: userFound.createdAt
+  })
+
+  res.send("profile")
+}
+
+module.exports = { login, register, logout, profile };
