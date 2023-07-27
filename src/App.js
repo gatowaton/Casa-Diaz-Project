@@ -45,6 +45,5 @@ function App() {
   );
 }
 
-// HOLA
 export default App;
 
