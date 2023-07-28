@@ -18,14 +18,14 @@ export const AuthProvider = ({children}) => {
 
 
     //se pasa la respuesta el user
-    const singup = async (user) => {
+    const signup = async (user) => {
         const res = await registerRequest(user);
         console.log(res.data);
         setUser(res.data)
     }
     return (
         <AuthContext.Provider value={{
-            singup,
+            signup,
             user
         }}>
             {children}

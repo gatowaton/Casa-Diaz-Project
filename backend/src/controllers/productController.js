@@ -13,14 +13,39 @@ productController.getProduct = async (req, res) => {
 };
 
 productController.createProduct = async(req, res) => {
-    const { title, description, price, stock, image, brand } = req.body;
+    const { 
+            Titulo,
+            CodigoProducto,
+            CodigoAlternativo,
+            Categoria,
+            SubCategoria,
+            UnidadMedida,
+            Marca,
+            PrecioVentaNeto,
+            PrecioVentaBruto,
+            Exento,
+            CodigoImpuesto,
+            Inventariable,
+            Activo,
+            Stock,
+            Foto 
+        } = req.body;
     const newProduct = new ProductModel({
-        title: title,
-        description: description,
-        price: price,
-        stock: stock,
-        image: image,
-        brand: brand
+        Titulo,
+        CodigoProducto,
+        CodigoAlternativo,
+        Categoria,
+        SubCategoria,
+        UnidadMedida,
+        Marca,
+        PrecioVentaNeto,
+        PrecioVentaBruto,
+        Exento,
+        CodigoImpuesto,
+        Inventariable,
+        Activo,
+        Stock,
+        Foto
     })
 
     // await newProduct.save();  // guardar en db
@@ -30,14 +55,39 @@ productController.createProduct = async(req, res) => {
 };
 
 productController.updateProduct = async (req, res) => {
-    const {title, description, price, stock, image, brand} = req.body;
+    const {
+        Titulo,
+        CodigoProducto,
+        CodigoAlternativo,
+        Categoria,
+        SubCategoria,
+        UnidadMedida,
+        Marca,
+        PrecioVentaNeto,
+        PrecioVentaBruto,
+        Exento,
+        CodigoImpuesto,
+        Inventariable,
+        Activo,
+        Stock,
+        Foto 
+    } = req.body;
     await ProductModel.findByIdAndUpdate(req.params.id,{
-        title, 
-        description, 
-        price, 
-        stock, 
-        image, 
-        brand
+        Titulo,
+        CodigoProducto,
+        CodigoAlternativo,
+        Categoria,
+        SubCategoria,
+        UnidadMedida,
+        Marca,
+        PrecioVentaNeto,
+        PrecioVentaBruto,
+        Exento,
+        CodigoImpuesto,
+        Inventariable,
+        Activo,
+        Stock,
+        Foto 
     })
     res.json({msg: "product updated"})
 };
