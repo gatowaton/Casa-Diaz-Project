@@ -1,0 +1,9 @@
+.Mapa {
+    border-radius: 20px;
+    border: 1px solid #000;
+    }
+.leaflet-container{
+    height: 300px;
+    width: 500px;
+    
+}

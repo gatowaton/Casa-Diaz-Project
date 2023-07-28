@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .pagination-bar {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    grid-column: 1 / -1; 
+  }
+  
