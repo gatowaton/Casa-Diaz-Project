@@ -30,12 +30,12 @@ function AdminProducts() {
       <div className='product-card-admin-container'>
         {products.map(product => (
           <div className='product-card-admin' key={product.id}>
-            <img src={product.image} alt="" />
+            <img src={product.Foto} alt="" />
             <div>
-              <h2>{product.title}</h2>
-              <p>Precio: ${product.price}</p>
-              <p>Marca: {product.brand}</p>
-              <strong>Stock: {product.stock}</strong>
+              <h2>{product.Titulo}</h2>
+              <p>Precio: ${product.PrecioVentaBruto}</p>
+              <p>Marca: {product.Marca}</p>
+              <strong>Stock: {product.Stock}</strong>
             </div>
             <div className='product-data-2'>
               <p>{product.date}</p> 
