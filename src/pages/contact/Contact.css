@@ -1,0 +1,15 @@
+.form-contact{
+    width:auto;
+    border-radius: 20px;
+    background-color:#7a8b9991;
+    padding: 25px;
+    color: black;
+
+
+}
+.form-contact .btn-enviar-contact {
+    background-color: #FACD03;
+    color: black;
+    border-radius: 30px;
+
+}
