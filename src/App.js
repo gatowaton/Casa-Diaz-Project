@@ -31,7 +31,7 @@ function App() {
             <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
             <Route path="/sucursales" element={<Sucursales/>} />
             <Route path="/productDetails" element={<ProductDetails/>} />
-            <Route path="/productList" element={Productos}/>;
+            <Route path="/productList" element={<Productos/>}/>
          </Routes>
          <Footer />
       </BrowserRouter>
