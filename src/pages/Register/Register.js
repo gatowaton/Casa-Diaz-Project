@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom"
 
 function Register() {
   //valores del user en un estado
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: {errors} } = useForm();
 
   //traer signup from useauth
   const {signup, isAuthenticated} = useAuth()
@@ -31,6 +31,7 @@ function Register() {
             placeholder="username"
             {...register("username", { required: true })}
           />
+          {errors.username && <p className="input-err">Username is required</p>}
         </div>
         <div>
           <input
@@ -38,6 +39,7 @@ function Register() {
             placeholder="email"
             {...register("email", { required: true })}
           />
+          {errors.email && <p className="input-err">Email is required</p>}
         </div>
         <div>
           <input
@@ -45,6 +47,7 @@ function Register() {
             placeholder="password"
             {...register("password", { required: true })}
           />
+          {errors.password && <p className="input-err">Password is required</p>}
         </div>
         <button type="submit">Registrarse</button>
       </form>
