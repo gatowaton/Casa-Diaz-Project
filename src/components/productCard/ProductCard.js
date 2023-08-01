@@ -22,7 +22,7 @@ function ProductCard() {
   return (
     <div className="product-card-container">
           {products.map((product) => (
-        <div className="product-card">
+        <div key={product._id} className="product-card">
         <div>
           <img src={product.Foto} alt="" />
           <div className="product-card-content">

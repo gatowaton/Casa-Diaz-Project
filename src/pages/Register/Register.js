@@ -2,15 +2,21 @@ import React from "react";
 import "./Register.css";
 import { useForm } from "react-hook-form";
 import {useAuth} from "../../Context/AuthContext"
+import { useEffect } from "react";
+import {useNavigate} from "react-router-dom"
 
 function Register() {
   //valores del user en un estado
   const { register, handleSubmit } = useForm();
 
   //traer signup from useauth
-  const {signup, user} = useAuth()
+  const {signup, isAuthenticated} = useAuth()
+  const navigate = useNavigate()
 
-  console.log(user);
+  useEffect(() => {
+    if (isAuthenticated) navigate("/")
+  }, [isAuthenticated])
+  
 
   const onSubmit = handleSubmit(async (values) => {
     signup(values);
