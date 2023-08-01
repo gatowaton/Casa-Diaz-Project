@@ -10,7 +10,7 @@ function Register() {
   const { register, handleSubmit, formState: {errors} } = useForm();
 
   //traer signup from useauth
-  const {signup, isAuthenticated} = useAuth()
+  const {signup, isAuthenticated, errors: registerErrors} = useAuth()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -24,6 +24,13 @@ function Register() {
 
   return (
     <div className="register-form">
+      {
+        registerErrors.map((error, i) => (
+          <div>
+            {error}
+          </div>
+        ))
+      }
       <form onSubmit={onSubmit}>
         <div>
           <input
