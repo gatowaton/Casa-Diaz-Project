@@ -1,23 +1,49 @@
-import React from "react";
-import cardimg from "../../img/interruptor.png";
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./ProductCard.css";
 
 function ProductCard() {
-   return (
-      <div className="product-card pb-3">
-         <img src={cardimg} alt="" />
-         <div className="product-card-content">
-            <span className="sku_marca">SKU 999999999</span>
-            <h2 className="product-card-title">Cable solarflex H1Z2Z2-K 4mm Rojo Libre De Halogeno 1800 VDC</h2>
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/api/product/");
+      setProducts(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <div className="product-card-container">
+          {products.map((product) => (
+        <div className="product-card">
+        <div>
+          <img src={product.Foto} alt="" />
+          <div className="product-card-content">
+            <span className="sku_marca">SKU {product.CodigoProducto}</span>
+            <h2 className="product-card-title">
+            {product.Titulo}
+            </h2>
             <span className="sku_marca">Marca</span>
             <br />
             <span className="product-card-price">
-               $54500 <span className="iva_color">IVA INCLUIDO</span>
+              ${product.PrecioVentaBruto}<span className="iva_color">IVA INCLUIDO</span>
             </span>
-         </div>
-         <button className="product-card-button">Agregar al Carrito</button>
-      </div>
-   );
+          </div>
+          <button className="product-card-button">Agregar al Carrito</button>
+        </div>
+    </div>
+      ))}
+    </div>
+
+  );
+
 }
 
 export default ProductCard;

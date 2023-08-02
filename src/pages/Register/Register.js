@@ -7,13 +7,13 @@ function Register() {
   //valores del user en un estado
   const { register, handleSubmit } = useForm();
 
-  //traer singup from useauth
-  const {singup, user} = useAuth()
+  //traer signup from useauth
+  const {signup, user} = useAuth()
 
   console.log(user);
 
   const onSubmit = handleSubmit(async (values) => {
-    singup(values);
+    signup(values);
   });
 
   return (
