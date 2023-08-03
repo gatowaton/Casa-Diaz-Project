@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProductCard.css";
 
-function ProductCard() {
+function ProductCard({ numToShow }) {
    const [products, setProducts] = useState([]);
 
    useEffect(() => {
@@ -20,7 +20,7 @@ function ProductCard() {
 
    return (
       <div className="product-card-container">
-         {products.map((product) => (
+         {products.slice(0, numToShow).map((product) => (
             <div className="product-card">
                <img src={product.Foto} alt="" />
                <div className="product-card-content">
