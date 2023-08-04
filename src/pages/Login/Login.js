@@ -2,6 +2,7 @@ import React from 'react'
 import "./Login.css"
 import { useForm } from "react-hook-form";
 import { useAuth } from '../../Context/AuthContext';
+import {Link} from "react-router-dom"
 
 function Login() {
 
@@ -35,6 +36,8 @@ function Login() {
         </div>
         <button type="submit">Login</button>
       </form>
+
+      <p>¿No tienes cuenta? <Link to={"/register"}><strong>Registrate</strong></Link></p>
     </div>
   )
 }
