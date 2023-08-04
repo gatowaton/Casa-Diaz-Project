@@ -4,9 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import emailjs from 'emailjs-com';
-
-
-
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Dashboard from "./pages/admin/Dashboard";
@@ -30,8 +27,8 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/carrito" element={<ShoppingCart />} />
           <Route path="/empresa" element={<Company />} />
           <Route path="/admin" element={<Dashboard />} />

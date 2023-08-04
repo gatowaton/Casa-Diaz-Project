@@ -26,7 +26,7 @@ function Register() {
     <div className="register-form">
       {
         registerErrors.map((error, i) => (
-          <div>
+          <div key={i}>
             {error}
           </div>
         ))
