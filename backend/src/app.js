@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser")
 const app = express();
 const cors = require("cors")
 const authRoutes = require("./routes/authRoute")
+const paymentRoutes = require("./routes/paymentRoute")
 
 
 
@@ -26,6 +27,19 @@ app.use(cookieParser())
 //app.use: cada vez que un usuario visite esta ruta usare otra logica
 app.use("/api/product", require("./routes/product"))
 app.use("/api" , authRoutes)
+app.use("/api", paymentRoutes)
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 module.exports = app
