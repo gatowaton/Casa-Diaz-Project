@@ -7,11 +7,11 @@ const productSchema = new Schema({
         required: true
     },
     CodigoProducto:{
-        type: Number,
+        type: String,
         default: 0
     },
     CodigoAlternativo:{
-        type: Number,
+        type: String,
         default: 0
     },
     Categoria:{

@@ -16,6 +16,7 @@ import CambiosDevoluciones from "./pages/cambiosYDevoluciones/CambiosDevolucione
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import { AuthProvider } from "./Context/AuthContext";
+import ProductView from "./pages/productView/ProductView";
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
@@ -27,6 +28,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/productDetails/:id" element={<ProductView/>}/>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/carrito" element={<ShoppingCart />} />

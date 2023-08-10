@@ -25,7 +25,7 @@ app.use(cookieParser())
 
 //routes
 //app.use: cada vez que un usuario visite esta ruta usare otra logica
-app.use("/api/product", require("./routes/product"))
+app.use("/api", require("./routes/product"))
 app.use("/api" , authRoutes)
 app.use("/api", paymentRoutes)
 
