@@ -16,14 +16,16 @@ const  Contact = () => {
       });
    };
    return (
-      <div>
-         <div className="container container-contact">
-            <br />
-            <h1>Contáctanos</h1>
-            <div className="row row-contact">
-               <div className="col-6 columna-izq-contact">
-                  <h1>Formulario de Contacto</h1>
+      <div className="contact-main">
+         <h1 >Contáctanos</h1>
+         <div className="container-contact">
+            
+            
+            
+               <div className="columna-izq-contact">
+                  
                   <form ref={form} onSubmit={sendEmail} className="form-contact">
+                     <h2>Formulario de Contacto</h2>
                      <div className="mb-3">
                         <label htmlFor="tipo-de-solicitud" className="form-label form-contact-label">
                            Tipo de solicitud
@@ -68,11 +70,10 @@ const  Contact = () => {
                         <label htmlFor="numero-usuario" className="col-sm-12 col-form-label">
                            Número de contacto
                         </label>
-                        <div className="col-sm-2">
-                           <input type="tel" name="user_tel1" className="form-control" id="numero-usuario1" placeholder="+569 ..." />
-                        </div>
-                        <div className="col-sm-5">
-                           <input type="tel" name="user_tel2" className="form-control" id="numero-usuario2" placeholder="88888888" />
+                        
+                        <div className="numero-contact">
+                           <div><p>+569</p></div>
+                           <div><input type="tel" name="user_tel2" className="form-control" id="numero-usuario2" placeholder="88888888" /></div>
                         </div>
                      </div>
 
@@ -119,8 +120,8 @@ const  Contact = () => {
                      </button>
                   </form>
                </div>
-               <div className="col-6 columna-derecha-contact">
-                  <h1>Ubícanos en</h1>
+               <div className="columna-derecha-contact">
+                  <h2>Ubícanos en</h2>
                   <h4>Casa Matriz y Salón de ventas</h4>
                   <p>Avenida Balmaceda 4252, local A</p>
                   <h4>Contáctanos al:</h4>
@@ -129,11 +130,10 @@ const  Contact = () => {
                      casadiaz@casadiaz.com
                   </p>
                </div>
-            </div>
+            
          </div>
 
-         <br />
-         <br />
+
       </div>
    );
 }
