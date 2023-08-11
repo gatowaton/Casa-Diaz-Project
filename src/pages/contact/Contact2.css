@@ -1,0 +1,45 @@
+.contact-main{
+    justify-content: center;
+    
+}
+
+
+.container-contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+    margin: 2em auto;
+}
+
+.columna-izq-contact{
+    display: flex;
+    max-width: 25em;
+    flex-direction: column;
+}
+.columna-derecha-contact{
+    display: flex;
+    flex-direction: column;
+    max-width: 25em;
+}
+
+.form-contact{
+    width:auto;
+    border-radius: 20px;
+    background-color:#7a8b9991;
+    padding: 25px;
+    color: black;
+}
+
+.numero-contact{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.form-contact .btn-enviar-contact {
+    background-color: #FACD03;
+    color: black;
+    border-radius: 30px;
+
+}
+

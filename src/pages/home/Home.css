@@ -19,7 +19,7 @@
 }
 .section_img_new_line {
    background-image: url(../../img/Sectionnuevalinea.png);
-   height: 34em;
+   height: auto;
    margin-top: 2em;
 }
 
@@ -43,7 +43,34 @@
    color: #facd03;
    font-size: 5em;
 }
-.section_footer {
-   background-color: #2e3532;
-   height: 29em;
+
+/* Estilos para pantallas medianas */
+@media (max-width: 991px) {
+   .section_img {
+      height: 20em;
+   }
+   .section_products_six {
+      width: 100%;
+      height: auto;
+   }
+   .section_novedades {
+      height: auto;
+   }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+   .section_img {
+      height: 15em;
+   }
+   .section_products_six {
+      width: 100%;
+      height: auto;
+   }
+   .section_novedades {
+      height: auto;
+   }
+   .section_img {
+      height: auto;
+   }
 }
