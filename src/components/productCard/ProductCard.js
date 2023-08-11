@@ -1,27 +1,20 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import MyContext from "../../Context/MyContext";
+import { useContext } from "react";
+
 import "./ProductCard.css";
 
 function ProductCard({ numToShow }) {
-   const [products, setProducts] = useState([]);
+   const { products, searchQuery } = useContext(MyContext);
 
-   useEffect(() => {
-      fetchProducts();
-   }, []);
-
-   const fetchProducts = async () => {
-      try {
-         const response = await axios.get("http://localhost:4000/api/product/");
-         setProducts(response.data);
-      } catch (error) {
-         console.error(error);
-      }
-   };
+   const filteredProducts =
+      searchQuery !== ""
+         ? products.filter((product) => product.Titulo.toLowerCase().includes(searchQuery.toLowerCase()))
+         : products;
 
    return (
       <div className="product-card-container">
-         {products.slice(0, numToShow).map((product) => (
-            <div className="product-card">
+         {filteredProducts.slice(0, numToShow).map((product) => (
+            <div className="product-card" key={product.CodigoProducto}>
                <img src={product.Foto} alt="" />
                <div className="product-card-content">
                   <span className="sku_marca">SKU {product.CodigoProducto}</span>

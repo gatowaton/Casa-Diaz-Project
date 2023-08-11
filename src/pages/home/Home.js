@@ -5,10 +5,14 @@ import imglanding from "../../img/iluminacion.png";
 import imgsix from "../../img/tomacorriente1.png";
 import imgnewline from "../../img/nuevalinea1.png";
 import novedades from "../../img/novedades1.png";
+import MyContext from "../../Context/MyContext";
+import { useContext } from "react";
 
 import "./Home.css";
 
 function Home() {
+   const { products } = useContext(MyContext);
+
    return (
       <div>
          <img src={bannerimg} className="img-fluid rounded mx-auto d-block p-4" alt="..."></img>
@@ -145,7 +149,7 @@ function Home() {
             <div className="container">
                <p className="text-start fs-1 p-3">Productos Destacados</p>
                <div className="row">
-                  <ProductCard numToShow={4} />
+                  <ProductCard products={products} numToShow={4} />
                </div>
             </div>
          </div>
