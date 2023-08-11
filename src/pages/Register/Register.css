@@ -8,3 +8,7 @@
         margin: 1em;
     }
 }
+
+.input-err{
+    color: red;
+}
