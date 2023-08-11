@@ -13,7 +13,7 @@ const createOrder = async (req, res) => {
 				unit_price: Number(req.body.price),
 				quantity: Number(req.body.quantity),
                 currency_id:"CLP",
-                picture_url:  req.body.Foto,
+                picture_url:  "",
             }
         ],
         back_urls:{

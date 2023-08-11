@@ -1,35 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProductCard.css";
-import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import {Link} from "react-router-dom"
 
 function ProductCard() {
   const [products, setProducts] = useState([]);
-  const [preferenceId, setPreferenceId] = useState(null);
-  initMercadoPago('TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22');
-
-  // mercado pago
-  const createPreference = async (product) => {
-    try {
-      const response = await axios.post("http://localhost:4000/api/create-order", {
-        description: product.Titulo,
-        price: product.PrecioVentaBruto,
-        quantity: 1,
-      });
-      const { id } = response.data;
-      return id;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const handleBuy = async (product) => {
-    const id = await createPreference(product);
-    if (id) {
-      setPreferenceId(id);
-    }
-  }
 
   useEffect(() => {
     fetchProducts();
@@ -63,10 +38,8 @@ function ProductCard() {
             </div>
             <button className="product-card-button">Agregar al Carrito</button>
             <Link to={`/productDetails/${product._id}`}>
-              <button>Detalles</button>
+              <button className="product-card-button">Detalles</button>
             </Link>
-            <button onClick={()=> handleBuy(product)} className="product-card-button">Comprar</button>
-            {preferenceId && <Wallet initialization={{ preferenceId }} />}
           </div>
         </div>  
       ))}
