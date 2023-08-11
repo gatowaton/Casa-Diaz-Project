@@ -2,9 +2,7 @@ import MyContext from "../../Context/MyContext";
 import { useContext } from "react";
 import React from "react";
 import "./ProductCard.css";
-import {Link} from "react-router-dom"
-
-
+import { Link } from "react-router-dom";
 
 function ProductCard({ numToShow }) {
    const { products, searchQuery } = useContext(MyContext);
@@ -30,19 +28,14 @@ function ProductCard({ numToShow }) {
                </div>
                <div className="btn-agregar pt-3">
                   <button className="product-card-button">Agregar al Carrito</button>
+                  <Link to={`/productDetails/${product._id}`}>
+                     <button className="product-card-button">Detalles</button>
+                  </Link>
                </div>
-
             </div>
-            <button className="product-card-button">Agregar al Carrito</button>
-            <Link to={`/productDetails/${product._id}`}>
-              <button className="product-card-button">Detalles</button>
-            </Link>
-          </div>
-        </div>  
-      ))}
-      
-    </div>
-  )}
-
+         ))}
+      </div>
+   );
+}
 
 export default ProductCard;
