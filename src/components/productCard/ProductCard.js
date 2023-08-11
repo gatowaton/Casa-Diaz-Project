@@ -4,6 +4,7 @@ import "./ProductCard.css";
 import {Link} from "react-router-dom"
 
 function ProductCard() {
+  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -46,5 +47,6 @@ function ProductCard() {
       
     </div>
   )}
+
 
 export default ProductCard;
