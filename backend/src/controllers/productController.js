@@ -8,8 +8,12 @@ productController.getProducts = async (req, res) => {
 };
 
 productController.getProduct = async (req, res) => {
-    const product = await ProductModel.findById(req.params.id) //devulve un producto
-    res.json(product)
+    try {
+        const product = await ProductModel.findById(req.params.id) //devulve un producto
+        res.json(product)
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 productController.createProduct = async(req, res) => {

@@ -12,9 +12,9 @@ const { authRequire } = require("../middlewares/validateToken");
 //     .put(updateProduct)
 //     .delete(deleteProduct)
 
-router.get("/", getProducts)
+router.get("/product", getProducts)
 
-router.get("/products/:id", authRequire, getProduct)
+router.get("/product/:id", getProduct)
 
 router.post("/", createProduct)
 

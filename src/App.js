@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import emailjs from "emailjs-com";
+
+import emailjs from 'emailjs-com';
 
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
@@ -17,6 +18,7 @@ import CambiosDevoluciones from "./pages/cambiosYDevoluciones/CambiosDevolucione
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import { AuthProvider } from "./Context/AuthContext";
+import ProductView from "./pages/productView/ProductView";
 
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
@@ -42,6 +44,7 @@ function App() {
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
+               <Route path="/productDetails/:id" element={<ProductView/>}/>
             </Routes>
             <Footer />
          </BrowserRouter>

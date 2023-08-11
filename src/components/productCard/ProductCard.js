@@ -1,7 +1,10 @@
 import MyContext from "../../Context/MyContext";
 import { useContext } from "react";
-
+import React from "react";
 import "./ProductCard.css";
+import {Link} from "react-router-dom"
+
+
 
 function ProductCard({ numToShow }) {
    const { products, searchQuery } = useContext(MyContext);
@@ -14,7 +17,7 @@ function ProductCard({ numToShow }) {
    return (
       <div className="product-card-container">
          {filteredProducts.slice(0, numToShow).map((product) => (
-            <div className="product-card" key={product.CodigoProducto}>
+            <div className="product-card" key={product._id}>
                <img src={product.Foto} alt="" />
                <div className="product-card-content">
                   <span className="sku_marca">SKU {product.CodigoProducto}</span>
@@ -28,10 +31,18 @@ function ProductCard({ numToShow }) {
                <div className="btn-agregar pt-3">
                   <button className="product-card-button">Agregar al Carrito</button>
                </div>
+
             </div>
-         ))}
-      </div>
-   );
-}
+            <button className="product-card-button">Agregar al Carrito</button>
+            <Link to={`/productDetails/${product._id}`}>
+              <button className="product-card-button">Detalles</button>
+            </Link>
+          </div>
+        </div>  
+      ))}
+      
+    </div>
+  )}
+
 
 export default ProductCard;
