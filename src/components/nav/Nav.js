@@ -6,6 +6,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import Logo from "../../img/logo.png";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import MyContext from "../../Context/MyContext";
 
 function Nav() {
    const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +34,21 @@ function Nav() {
       };
    }, []);
 
+   const { setSearchQuery } = useContext(MyContext);
+   const [inputValue, setInputValue] = useState("");
+
+   const navigate = useNavigate();
+
+   const handleSearch = (event) => {
+      event.preventDefault();
+      setSearchQuery(inputValue);
+      navigate(`/productos`);
+   };
+
+   const getValue = (e) => {
+      setInputValue(e.target.value);
+   };
+
    return (
       <nav className={`mega-navbar ${isScrolling ? "navbar-main scrolling" : ""}`}>
          <div className="mega-navbar-block-0">
@@ -48,14 +66,24 @@ function Nav() {
                </div>
             </div>
          </div>
+
          <div className="navbar-main">
             <div className="container">
                <div className="mega-navbar-block-1">
                   <img src={Logo} alt="" />
                   <div className="nav-input-container">
-                     <input className="nav-input" type="text" placeholder="¿Que Necesitas?" />
-                     <SearchIcon htmlColor="black" />
+                     <form onSubmit={handleSearch}>
+                        <input
+                           className="nav-input"
+                           value={inputValue}
+                           type="text"
+                           placeholder="¿Que Necesitas?"
+                           onChange={getValue}
+                        />
+                        <SearchIcon id="search-icon" htmlColor="black" onClick={handleSearch} />
+                     </form>
                   </div>
+
                   <div className="mega-navbar-block-1-2">
                      <input type="button" value="Ingresar" />
                      <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
