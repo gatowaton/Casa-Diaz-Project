@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './productDetails.css';
 import FotoProducto from "../../img/bobina.jpg";
+import miniCard from "../../components/filter/filter"
 
 const ProductCard = () => {
   const [quantity, setQuantity] = useState(1);
@@ -10,6 +11,7 @@ const ProductCard = () => {
   };
   
   return (
+  <div className='container-box'>
     <div className="product-container">
       <div className='product-box'>
         <div className="product-image-container">
@@ -31,8 +33,25 @@ const ProductCard = () => {
           </div>
           <button className="add-to-cart-btn">Añadir al carrito</button>
         </div>
+      </div> 
+    </div>
+    <div className='description-buttons'>
+     <br/>
+      <ul>
+        <button>descripcion y certificación</button>
+        <button>ficha tecnica</button>
+        <button>archivos</button>
+      </ul>
+      <div className='description-text'>
+        
       </div>
     </div>
+    <div>
+     
+    </div>
+  </div>  
+
+
   );
 };
 

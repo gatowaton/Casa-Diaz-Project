@@ -1,3 +1,10 @@
+/* contenedor principal de la página */
+.container-box {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Estilos para el contenedor principal del producto */
   .product-container {
     width: 940px;
@@ -6,6 +13,7 @@
     border-radius: 20px;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .product-box{
@@ -84,5 +92,20 @@
   /* Estilos para el botón "Añadir al carrito" al pasar el ratón */
   .add-to-cart-btn:hover {
     background-color: #0056b3;
+  }
+
+  .description-text{
+    width: 940px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .description-buttons{
+    width: 940px;
+    
   }
   
