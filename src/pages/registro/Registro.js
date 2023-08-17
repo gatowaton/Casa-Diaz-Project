@@ -14,10 +14,7 @@ function Registro() {
     <label for="validationDefault01" className="form-label">Nombre</label>
     <input type="text" className="form-control" id="validationDefault01"></input>
   </div>
-  <div className="col-md-4">
-    <label for="validationDefault02" className="form-label">Apellido</label>
-    <input type="text" className="form-control" id="validationDefault02" ></input>
-  </div>
+ 
   <div className="col-md-4">
     <label for="validationDefaultUsername" className="form-label">Mail</label>
     <div className="input-group">
@@ -30,18 +27,7 @@ function Registro() {
     <label for="validationDefault03" className="form-label">Contraseña</label>
     <input type="password" className="form-control" id="validationDefault03"></input>
   </div>
-
-
   
-  <div className="col-md-3">
-    <label for="validationDefault04" className="form-label">Usuario</label>
-    <select className="form-select" id="validationDefault04">
-      <option selected disabled value=" ">Selecciona</option>
-      <option>Persona natural</option>
-      <option>Empresa</option>
-
-    </select>
-  </div>
   
   <div className="col-12">
     <div className="form-check">

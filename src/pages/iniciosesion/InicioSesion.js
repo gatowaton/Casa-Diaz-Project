@@ -1,30 +1,17 @@
 import React, { useState } from "react";
 import "./InicioSesion.css";
 
-export const InicioSesion = () => {
-  const [miInicioSesion, setIniciarSesion] = useState("false");
-  const [usu, setUsu] = useState("");
-  const [pas, setPas] = useState("");
+const InicioSesion = ({handleLogin}) =>{
+  const[username, setUsername] = useState('');
+  const[password, setPassword] = useState('');
 
-  function InicioSesion(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    var emailusu = document.getElementById("email").value;
-    var passwordpas = document.getElementById("password").value;
-    if (emailusu.length === 0 || passwordpas.length === 0) {
-      alert("Complete los datos faltantes");
-    } else {
-      if (usu === "admin" && pas === "123") {
-        setIniciarSesion("true");
-        document.getElementById("form_login").style.display = "none";
-      } else {
-        setIniciarSesion("false");
-        alert("Error de usuario y/o contraseña");
-        document.getElementById("emailusu").value = "";
-        document.getElementById("passwordusu").value = "";
-        document.getElementById("emailusu").focus();
-      }
+    if(username && password){
+      handleLogin(username);
     }
-  }
+  };
+
 
   return (
     <div className="container-is">
@@ -36,21 +23,23 @@ export const InicioSesion = () => {
               <h4>Si ya tienes una cuenta, inicia sesión con tu correo</h4>
               
 
-              <form id="form_login">
+              <form onSubmit={handleSubmit}>
                 <label For="email">Correo electronico</label>
                
                 <input
                   type="text"
-                  id="email"
-                  onChange={(e) => setUsu(e.target.value)}
+                  placeholder="Introduce tu correo"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 ></input>
                 
                 <label For="password">Contraseña</label>
                
                 <input
                   type="password"
-                  id="password"
-                  onChange={(e) => setPas(e.target.value)}
+                  placeholder="Introduce tu contraseña"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 ></input>
                 
                 <button
