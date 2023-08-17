@@ -60,9 +60,9 @@ function ProductView() {
           </div>
           <h2>{product.Categoria}</h2>
           <h1>{product.Titulo}</h1>
-          <p>{product.PrecioVentaBruto}</p>
-          <p>{product.CodigoProducto}</p>
-          <button onClick={()=> handleBuy(product)} className="product-card-button">Comprar</button>
+          <p className="product-card-price">${product.PrecioVentaBruto}</p>
+          <strong>SKU:{product.CodigoProducto}</strong>
+          <button onClick={()=> handleBuy(product)} className="product-detail-btn">Comprar</button>
             {preferenceId && <Wallet initialization={{ preferenceId }} />}
         </div>
       ) : (
