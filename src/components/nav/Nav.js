@@ -9,7 +9,6 @@ import Logo from "../../img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
-import { Link } from "react-router-dom";
 
 function Nav() {
    const [isOpen, setIsOpen] = useState(false);
@@ -98,11 +97,10 @@ function Nav() {
 
                   <div className="mega-navbar-block-1-2">
                      <input type="button" value="Ingresar" />
-                     
+
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
                      </Link>
-                     
                   </div>
                </div>
             </div>
