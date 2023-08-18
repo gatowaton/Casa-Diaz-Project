@@ -1,5 +1,5 @@
 const express = require('express');
-// const morgan = require("morgan");
+const morgan = require("morgan");
 const cookieParser = require("cookie-parser")
 const app = express();
 const cors = require("cors")
@@ -8,7 +8,7 @@ const paymentRoutes = require("./routes/paymentRoute")
 
 
 
-// app.use(morgan("dev"));
+app.use(morgan("dev"));
 
 //settings
 
