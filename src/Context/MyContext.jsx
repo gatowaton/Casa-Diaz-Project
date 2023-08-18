@@ -7,6 +7,7 @@ export const ConstextoProvider = (props) => {
    const [searchQuery, setSearchQuery] = useState("");
    const [productosMostrados, setProductosMostrados] = useState([]);
    const [products, setProducts] = useState([]);
+   const lstCategoria = ["Iluminación", "Canalización", "Electricidad", "Ferretería y Gasfitería"];
 
    useEffect(() => {
       fetchProducts();
@@ -31,6 +32,7 @@ export const ConstextoProvider = (props) => {
             setSearchQuery,
             productosMostrados,
             setProductosMostrados,
+            lstCategoria,
          }}>
          {props.children}
       </MyContext.Provider>
