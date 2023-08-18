@@ -182,7 +182,7 @@ function Home() {
             </div>
          </div>
 
-         <div className="section_condiciones container pt-5">
+         <div className="section_condiciones container">
             <div className="row py-5">
                <div className="col-lg-4 col-md-6 col-sm-12 text-center ">
                   <i className="bi bi-box icons-size"></i>

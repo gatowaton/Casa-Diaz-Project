@@ -97,11 +97,10 @@ function Nav() {
 
                   <div className="mega-navbar-block-1-2">
                      <input type="button" value="Ingresar" />
-                     
+
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
                      </Link>
-                     
                   </div>
                </div>
             </div>
