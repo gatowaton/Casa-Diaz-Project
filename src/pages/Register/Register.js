@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Register.css";
 import { useForm } from "react-hook-form";
-import {useAuth} from "../../Context/AuthContext"
-import { useEffect } from "react";
-import {useNavigate} from "react-router-dom"
+import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
-  //valores del user en un estado
-  const { register, handleSubmit, formState: {errors} } = useForm();
-
-  //traer signup from useauth
-  const {signup, isAuthenticated, errors: registerErrors} = useAuth()
-  const navigate = useNavigate()
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { signup, isAuthenticated, errors: registerErrors } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/")
-  }, [isAuthenticated])
-  
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated, navigate]); // Agrega navigate al arreglo de dependencias
 
   const onSubmit = handleSubmit(async (values) => {
     signup(values);
@@ -24,13 +21,9 @@ function Register() {
 
   return (
     <div className="register-form">
-      {
-        registerErrors.map((error, i) => (
-          <div key={i}>
-            {error}
-          </div>
-        ))
-      }
+      {registerErrors.map((error, i) => (
+        <div key={i}>{error}</div>
+      ))}
       <form onSubmit={onSubmit}>
         <div>
           <input

@@ -7,6 +7,7 @@ export const ConstextoProvider = (props) => {
    const [searchQuery, setSearchQuery] = useState("");
    const [productosMostrados, setProductosMostrados] = useState([]);
    const [products, setProducts] = useState([]);
+   const lstCategoria = ["Iluminación", "Canalización", "Electricidad", "Ferretería y Gasfitería"];
 
    //Agregando contexto de carrito
    const [cart,setCart] = useState([]);
@@ -39,6 +40,7 @@ export const ConstextoProvider = (props) => {
             setSearchQuery,
             productosMostrados,
             setProductosMostrados,
+            lstCategoria,
             cart,
             setCart
          }}>

@@ -1,0 +1,39 @@
+.container-is {
+    margin: 2em; 
+}
+
+h1{
+    margin-left: 70px;
+}
+
+.col-lg-6 {
+    background-color: rgb(238, 228, 228);
+    border-radius: 10px;
+    padding: 1em;
+    box-sizing: content-box;
+    
+}
+
+label{
+    font-size:20px;
+    margin: 10px;
+    text-align: justify;
+}
+input {
+    width: 80% ;
+    height:40px;
+    border-radius: 3px;
+}
+
+.container1{
+    margin-bottom: 10px;
+}
+
+h4{
+    font-size: 19px;
+}
+
+button{
+    margin: 1em;
+    text-align: justify;
+}
