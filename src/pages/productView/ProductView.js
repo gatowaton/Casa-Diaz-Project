@@ -76,7 +76,7 @@ function ProductView() {
                      </div>
                      <div className="d-flex align-items-center">
                         <div class="product-quantity px-2">
-                           <input type="number" min={0} />
+                           <input type="Number" min={0} />
                         </div>
                         <div className="px-1">
                            <button className="product-card-button ">Agregar al Carrito</button>

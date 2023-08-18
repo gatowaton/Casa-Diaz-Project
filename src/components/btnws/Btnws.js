@@ -5,7 +5,6 @@ import "./Btnws.css";
 const Btnws = () => {
    return (
       <div>
-         <p>s</p>
          <a className="btn-wsp" target="blank" href="https://w.app/CasaDiazSpa">
             <WhatsAppIcon />
          </a>

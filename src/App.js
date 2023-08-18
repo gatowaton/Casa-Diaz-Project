@@ -23,6 +23,7 @@ import ProductView from "./pages/productView/ProductView";
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
 import Btnws from "./components/btnws/Btnws";
+import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
@@ -44,6 +45,7 @@ function App() {
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
                <Route path="/productDetails/:id" element={<ProductView />} />
+               <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
             </Routes>
             <Btnws />
             <Footer />
