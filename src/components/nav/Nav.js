@@ -54,14 +54,17 @@ function Nav() {
          <div className="mega-navbar-block-0">
             <div className="container">
                <div className="mega-navbar-block-0-1">
-                  Dashboard
                   <div>
                      <PinDropIcon />
                      <samp>Sucursales</samp>
                   </div>
                   <div>
-                     <WhatsAppIcon />
-                     <samp>Contactanos</samp>
+                     <a target="blank" href="https://w.app/CasaDiazSpa">
+                        <WhatsAppIcon />
+                     </a>
+                     <a target="blank" href="https://w.app/CasaDiazSpa">
+                        <samp>Contactanos</samp>
+                     </a>
                   </div>
                </div>
             </div>
@@ -92,20 +95,13 @@ function Nav() {
             </div>
             <div className="mega-navbar-container">
                <ul className="mega-navbar-menu">
-                  <li>
-                     <a href="/">Home</a>
-                  </li>
-                  <li>
-                     <a href="/">Iluminacion</a>
-                  </li>
                   <li
                      className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}>
-                     <a href="/">Electricidad</a>
+                     <a href="/">Iluminación</a>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
-                           <h3>Category 1</h3>
                            <ul>
                               <li>
                                  <a href="/">Service 1</a>
@@ -119,7 +115,108 @@ function Nav() {
                            </ul>
                         </div>
                         <div className="mega-navbar-dropdown-column">
-                           <h3>Transmisión</h3>
+                           <ul>
+                              <li>
+                                 <a href="/">Service 4</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 5</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 6</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li
+                     className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
+                     onMouseEnter={toggleDropdown}
+                     onMouseLeave={toggleDropdown}>
+                     <a href="/">Canalización</a>
+                     <div className="mega-navbar-dropdown-content">
+                        <div className="mega-navbar-dropdown-column">
+                           <ul>
+                              <li>
+                                 <a href="/">Service 1</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 2</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 3</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div className="mega-navbar-dropdown-column">
+                           <ul>
+                              <li>
+                                 <a href="/">Service 4</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 5</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 6</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li
+                     className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
+                     onMouseEnter={toggleDropdown}
+                     onMouseLeave={toggleDropdown}>
+                     <a href="/">Electricidad</a>
+                     <div className="mega-navbar-dropdown-content">
+                        <div className="mega-navbar-dropdown-column">
+                           <ul>
+                              <li>
+                                 <a href="/">Service 1</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 2</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 3</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div className="mega-navbar-dropdown-column">
+                           <ul>
+                              <li>
+                                 <a href="/">Service 4</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 5</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 6</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li
+                     className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
+                     onMouseEnter={toggleDropdown}
+                     onMouseLeave={toggleDropdown}>
+                     <a href="/">Ferretería y Gasfitería</a>
+                     <div className="mega-navbar-dropdown-content">
+                        <div className="mega-navbar-dropdown-column">
+                           <ul>
+                              <li>
+                                 <a href="/">Service 1</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 2</a>
+                              </li>
+                              <li>
+                                 <a href="/">Service 3</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
                                  <a href="/">Service 4</a>
@@ -135,7 +232,7 @@ function Nav() {
                      </div>
                   </li>
                   <li>
-                     <a href="/">Contact</a>
+                     <a href="/contacto">Contactanos</a>
                   </li>
                </ul>
             </div>
