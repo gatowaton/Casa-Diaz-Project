@@ -1,5 +1,5 @@
 // dotenv debe iniciar primero
-require('dotenv').config();
+// require('dotenv').config();
 const app = require('./app');
 // require("./database/database");
 const connectDB = require("./database/database")
