@@ -23,6 +23,10 @@ import ProductView from "./pages/productView/ProductView";
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
 
+import CarroDePruebas from "./pages/carroDePruebas/CarroDePruebas";
+import CartElements from "./pages/shoppingCart/CartElements";
+import CartContent from "./pages/shoppingCart/CartContent";
+
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
@@ -45,6 +49,12 @@ function App() {
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
                <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/carrodepruebas" element={<CarroDePruebas/>}/>
+               <Route path="/elementoscart" element={<CartElements/>}/>
+               <Route path="/carrito2" element={<CartContent/>}/>
+
+
+
             </Routes>
             <Footer />
          </BrowserRouter>

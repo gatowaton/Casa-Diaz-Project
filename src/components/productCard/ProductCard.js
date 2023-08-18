@@ -5,7 +5,15 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 function ProductCard({ numToShow }) {
-   const { products, searchQuery } = useContext(MyContext);
+   const { products, searchQuery, cart, setCart} = useContext(MyContext);
+
+   // Funcion añadir al carrito
+
+   const buyProducts = (product) => {
+      console.log(product);
+      setCart([...cart,product])
+
+   }
 
    const filteredProducts =
       searchQuery !== ""
@@ -27,7 +35,7 @@ function ProductCard({ numToShow }) {
                   </span>
                </div>
                <div className="btn-agregar pt-3">
-                  <button className="product-card-button">Agregar al Carrito</button>
+                  <button onClick={()=> buyProducts (product)} className="product-card-button">Agregar al Carrito</button>
                   <Link to={`/productDetails/${product._id}`}>
                      <button className="product-card-button">Detalles</button>
                   </Link>

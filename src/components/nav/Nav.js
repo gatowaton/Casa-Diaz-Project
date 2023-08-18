@@ -6,7 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import Logo from "../../img/logo.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
 
@@ -86,7 +86,11 @@ function Nav() {
 
                   <div className="mega-navbar-block-1-2">
                      <input type="button" value="Ingresar" />
-                     <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
+                     
+                     <Link className="seeCarrito" to={"/carrito2"}>
+                        <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
+                     </Link>
+                     
                   </div>
                </div>
             </div>
