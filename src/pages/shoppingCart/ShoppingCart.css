@@ -41,3 +41,8 @@
    height: 2.5rem;
    width: 100%;
 }
+.product-image img{
+   width: 100px;
+   height: 100px;
+   border-radius: 20px;
+}

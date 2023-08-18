@@ -1,13 +1,21 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-const MyContext = createContext({});
+export const MyContext = createContext({});
 
 export const ConstextoProvider = (props) => {
    const [searchQuery, setSearchQuery] = useState("");
    const [productosMostrados, setProductosMostrados] = useState([]);
    const [products, setProducts] = useState([]);
    const lstCategoria = ["Iluminación", "Canalización", "Electricidad", "Ferretería y Gasfitería"];
+
+   //Agregando contexto de carrito
+   const [cart,setCart] = useState([]);
+
+
+
+
+
 
    useEffect(() => {
       fetchProducts();
@@ -33,6 +41,8 @@ export const ConstextoProvider = (props) => {
             productosMostrados,
             setProductosMostrados,
             lstCategoria,
+            cart,
+            setCart
          }}>
          {props.children}
       </MyContext.Provider>

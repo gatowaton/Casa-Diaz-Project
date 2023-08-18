@@ -29,6 +29,10 @@ import Registro from "./pages/Registro/Registro";
 import Btnws from "./components/btnws/Btnws";
 import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
 
+import CarroDePruebas from "./pages/carroDePruebas/CarroDePruebas";
+import CartElements from "./pages/shoppingCart/CartElements";
+import CartContent from "./pages/shoppingCart/CartContent";
+
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
@@ -55,6 +59,13 @@ function App() {
                <Route path="/registro" element={<Registro/>} />
                <Route path="/productDetails/:id" element={<ProductView />} />
                <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
+               <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/carrodepruebas" element={<CarroDePruebas/>}/>
+               <Route path="/elementoscart" element={<CartElements/>}/>
+               <Route path="/carrito2" element={<CartContent/>}/>
+
+
+
             </Routes>
             <Btnws />
             <Footer />

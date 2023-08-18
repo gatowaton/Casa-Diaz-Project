@@ -1,0 +1,46 @@
+.box-cart {
+    background-color: #cad1d4;
+    width: 54rem;
+    height: auto;
+    border-radius: 25px;
+    padding: 1.5em;
+ }
+ .box-cart-result {
+    background-color: #cad1d4;
+    width: 23rem;
+ 
+    border-radius: 25px;
+    padding-bottom: 1em;
+ }
+ .product-quantity input {
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #d9d9d9;
+    font-size: 1.2em;
+    border: solid 0.1px;
+ }
+ .btn-cart-delete,
+ .btn-cart-act {
+    background-color: #5d6463;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    height: 2rem;
+ }
+ 
+ .btn-cotizar,
+ .btn-pay {
+    background-color: #5d6463;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    height: 2.5rem;
+    width: 100%;
+ }
+
+
+ 
