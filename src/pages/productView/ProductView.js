@@ -56,7 +56,7 @@ function ProductView() {
       <div className="container pb-4">
          {product ? (
             <div>
-               <p className="pt-2">
+               <p className="pt-1">
                   {" "}
                   <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                      Inicio
