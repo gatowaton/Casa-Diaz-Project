@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
@@ -22,12 +22,12 @@ import ProductView from "./pages/productView/ProductView";
 
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
-
+import Btnws from "./components/btnws/Btnws";
+import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
 function App() {
-
    return (
       <AuthProvider>
          <BrowserRouter>
@@ -44,8 +44,10 @@ function App() {
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
-               <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/productDetails/:id" element={<ProductView />} />
+               <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
             </Routes>
+            <Btnws />
             <Footer />
          </BrowserRouter>
       </AuthProvider>
