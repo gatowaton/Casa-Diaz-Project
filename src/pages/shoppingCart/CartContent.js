@@ -19,7 +19,6 @@ const CartContent = () => {
 
     <>
     <CartElements/>
-    <CartTotal/>
   
     </>
     ): (

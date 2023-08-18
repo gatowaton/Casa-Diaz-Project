@@ -6,7 +6,7 @@ import React from 'react'
 
 
 
-const CartTotal = () => {
+export const CartTotal = () => {
     const { cart } = useContext(MyContext);
 
     const total = cart.reduce((acc, el) => acc + el.PrecioVentaBruto,0);
