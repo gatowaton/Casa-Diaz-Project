@@ -22,8 +22,13 @@ import ProductView from "./pages/productView/ProductView";
 
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
+
+import InicioSesion from "./pages/InicioSesion/InicioSesion";
+import DespachoRetiro from "./pages/DespachoRetiro/DespachoRetiro";
+import Registro from "./pages/Registro/Registro";
 import Btnws from "./components/btnws/Btnws";
 import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
+
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
@@ -32,7 +37,7 @@ function App() {
       <AuthProvider>
          <BrowserRouter>
             <Nav />
-            <Routes>
+            <Routes> 
                <Route path="/" element={<Home />} />
                <Route path="register" element={<Register />} />
                <Route path="login" element={<Login />} />
@@ -44,6 +49,10 @@ function App() {
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
+              
+               <Route path="/despachoretiro" element={<DespachoRetiro/>} />
+               <Route path="/iniciosesion" element={<InicioSesion/>}/>
+               <Route path="/registro" element={<Registro/>} />
                <Route path="/productDetails/:id" element={<ProductView />} />
                <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
             </Routes>
