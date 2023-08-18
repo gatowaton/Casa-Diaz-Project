@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "serve build -s -n -L $PORTF"
+    "start": "serve -s -n -L -l 3000 build"
   },
   "eslintConfig": {
     "extends": [
