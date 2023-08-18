@@ -1,16 +1,15 @@
 .container {
-    margin: auto;
-    margin-top: 16mm;    
+   margin: auto;
 }
 
-.row.g-3{
-    background-color: rgb(174, 173, 173);
-    border-radius: 5px;
-    padding: 5mm;
+.row.g-3 {
+   background-color: rgb(174, 173, 173);
+   border-radius: 5px;
+   padding: 5mm;
 }
 
-h1{
-    text-align: justify;
-    margin: 20mm;
-    padding: 10mm;
+h1 {
+   text-align: justify;
+   margin: 20mm;
+   padding: 10mm;
 }
