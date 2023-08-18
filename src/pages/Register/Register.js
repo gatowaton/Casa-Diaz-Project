@@ -15,7 +15,7 @@ function Register() {
 
   useEffect(() => {
     if (isAuthenticated) navigate("/")
-  }, [isAuthenticated])
+  }, [isAuthenticated, navigate])
   
 
   const onSubmit = handleSubmit(async (values) => {

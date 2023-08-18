@@ -13,22 +13,22 @@ function UserInfo() {
                   <div className="nav-panel-info-usuario">
                      <ul className="nav flex-column links-panel-info-usuario">
                         <li className="nav-item mi-cuenta">
-                           <a className="nav-link link-mi-cuenta-usuario" href="#">
+                           <a className="nav-link link-mi-cuenta-usuario" href="https://www.google.cl/">
                               <h6 className="texto-panel-izq-cuenta">Mi cuenta</h6>
                            </a>
                         </li>
                         <li className="nav-item panel">
-                           <a className="nav-link link-panel-usuario" href="#">
+                           <a className="nav-link link-panel-usuario" href="https://www.google.cl/">
                               <h6 className="texto-panel-izq-cuenta">Panel</h6>
                            </a>
                         </li>
                         <li className="nav-item informacion">
-                           <a className="nav-link link-informacion-usuario" href="#">
+                           <a className="nav-link link-informacion-usuario" href="https://www.google.cl/">
                               <h6 className="texto-panel-izq-cuenta">Información</h6>
                            </a>
                         </li>
                         <li className="nav-item mis-pedidos-usuario">
-                           <a className="nav-link link-mis-pedidos-usuario" href="#">
+                           <a className="nav-link link-mis-pedidos-usuario" href="https://www.google.cl/">
                               <h6 className="texto-panel-izq-cuenta">Mis pedidos</h6>
                            </a>
                         </li>
