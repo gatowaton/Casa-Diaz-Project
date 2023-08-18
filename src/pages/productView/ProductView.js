@@ -87,12 +87,12 @@ function ProductView() {
                            </button>
                         </div>
                      </div>
+                     {preferenceId && <Wallet initialization={{ preferenceId }} />}
                   </div>
                </div>
                <div></div>
                <h4>Quienes compraron este producto tambien compraron</h4>
                <ProductCard products={products} numToShow={4} />
-               {preferenceId && <Wallet initialization={{ preferenceId }} />}
             </div>
          ) : (
             <div>Loading...</div>
