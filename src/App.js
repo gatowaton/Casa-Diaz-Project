@@ -22,6 +22,10 @@ import ProductView from "./pages/productView/ProductView";
 
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
+import InicioSesion from "./pages/InicioSesion/InicioSesion";
+import DespachoRetiro from "./pages/DespachoRetiro/DespachoRetiro";
+import Registro from "./pages/Registro/Registro";
+
 
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
@@ -32,7 +36,7 @@ function App() {
       <AuthProvider>
          <BrowserRouter>
             <Nav />
-            <Routes>
+            <Routes> 
                <Route path="/" element={<Home />} />
                <Route path="register" element={<Register />} />
                <Route path="login" element={<Login />} />
@@ -45,8 +49,11 @@ function App() {
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
                <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/despachoretiro" element={<DespachoRetiro/>} />
+               <Route path="/iniciosesion" element={<InicioSesion/>}/>
+               <Route path="/registro" element={<Registro/>} />
             </Routes>
-            <Footer />
+            <Footer/>
          </BrowserRouter>
       </AuthProvider>
    );
