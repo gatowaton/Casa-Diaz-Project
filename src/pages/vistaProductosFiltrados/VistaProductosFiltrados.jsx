@@ -7,10 +7,14 @@ import "../../components/productCard/ProductCard.css";
 
 const VistaProductosFiltrados = () => {
    const { Categoria } = useParams();
-   const { productosMostrados } = useContext(MyContext);
+   const { productosMostrados, setCart, cart } = useContext(MyContext);
 
    // Filtra los productos según la categoría seleccionada
    const productosFiltrados = productosMostrados.filter((producto) => producto.Categoria === Categoria);
+
+   const buyProducts = (product) => {
+      setCart([...cart, product]);
+   };
 
    return (
       <div className="container">
@@ -36,7 +40,9 @@ const VistaProductosFiltrados = () => {
                   </div>
                   <div className="btn-agregar pt-3">
                      <div>
-                        <button className="product-card-button">Agregar al Carrito</button>
+                        <button onClick={() => buyProducts(product)} className="product-card-button">
+                           Agregar al Carrito
+                        </button>
                      </div>
                      <div>
                         <Link to={`/productDetails/${product._id}`}>
