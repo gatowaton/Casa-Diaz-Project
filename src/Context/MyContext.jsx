@@ -14,7 +14,7 @@ export const ConstextoProvider = (props) => {
 
    const fetchProducts = async () => {
       try {
-         const response = await axios.get("http://localhost:4000/api/product/");
+         const response = await axios.get("https://casa-back.onrender.com/api/product");
          setProducts(response.data);
          setProductosMostrados(response.data);
       } catch (error) {
