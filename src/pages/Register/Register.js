@@ -10,16 +10,11 @@ function Register() {
   const navigate = useNavigate();
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (isAuthenticated) {
-      navigate("/");
-    }
-  }, [isAuthenticated, navigate]); // Agrega navigate al arreglo de dependencias
-=======
+
     if (isAuthenticated) navigate("/")
   }, [isAuthenticated, navigate])
   
->>>>>>> deployrail
+
 
   const onSubmit = handleSubmit(async (values) => {
     signup(values);
