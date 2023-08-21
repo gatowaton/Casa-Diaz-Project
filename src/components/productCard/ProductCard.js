@@ -15,32 +15,36 @@ function ProductCard({ numToShow }) {
 
    return (
       <div className="product-card-container">
-         {filteredProducts.slice(0, numToShow).map((product) => (
-            <div className="product-card" key={product._id}>
-               <img className="card-img-size" src={product.Foto} alt="" />
-               <div className="product-card-content">
-                  <span className="sku_marca">SKU {product.CodigoProducto}</span>
-                  <h2 className="product-card-title">{product.Titulo}</h2>
-                  <span className="sku_marca">Marca</span>
-                  <span className="product-card-price">
-                     ${product.PrecioVentaBruto}
-                     <span className="iva_color ps-1">IVA INCLUIDO</span>
-                  </span>
-               </div>
-               <div className="btn-agregar pt-3">
-                  <div>
-                     <button onClick={() => buyProducts(product)} className="product-card-button">
-                        Agregar al Carrito
-                     </button>
+         {filteredProducts.length === 0 ? (
+            <p>No se consigue ese producto</p>
+         ) : (
+            filteredProducts.slice(0, numToShow).map((product) => (
+               <div className="product-card" key={product._id}>
+                  <img className="card-img-size" src={product.Foto} alt="" />
+                  <div className="product-card-content">
+                     <span className="sku_marca">SKU {product.CodigoProducto}</span>
+                     <h2 className="product-card-title">{product.Titulo}</h2>
+                     <span className="sku_marca">Marca</span>
+                     <span className="product-card-price">
+                        ${product.PrecioVentaBruto}
+                        <span className="iva_color ps-1">IVA INCLUIDO</span>
+                     </span>
                   </div>
-                  <div>
-                     <Link to={`/productDetails/${product._id}`}>
-                        <button className="product-card-button">Detalles</button>
-                     </Link>
+                  <div className="btn-agregar pt-3">
+                     <div>
+                        <button onClick={() => buyProducts(product)} className="product-card-button">
+                           Agregar al Carrito
+                        </button>
+                     </div>
+                     <div>
+                        <Link to={`/productDetails/${product._id}`}>
+                           <button className="product-card-button">Detalles</button>
+                        </Link>
+                     </div>
                   </div>
                </div>
-            </div>
-         ))}
+            ))
+         )}
       </div>
    );
 }
