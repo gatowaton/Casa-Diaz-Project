@@ -19,6 +19,7 @@ const CartContent = () => {
 
     <>
     <CartElements/>
+    <CartTotal/>
   
     </>
     ): (

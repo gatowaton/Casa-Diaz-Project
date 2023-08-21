@@ -5,13 +5,8 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 function ProductCard({ numToShow }) {
-   const { products, searchQuery, cart, setCart } = useContext(MyContext);
+   const { products, searchQuery,buyProducts } = useContext(MyContext);
 
-   // Funcion añadir al carrito
-
-   const buyProducts = (product) => {
-      setCart([...cart, product]);
-   };
 
    const filteredProducts =
       searchQuery !== ""

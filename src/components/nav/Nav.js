@@ -9,11 +9,14 @@ import Logo from "../../img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
+import TotalItems from "../../pages/shoppingCart/TotalItems";
+import CartTotal from "../../pages/shoppingCart/CartTotal";
+
 
 function Nav() {
    const [isOpen, setIsOpen] = useState(false);
    const [isScrolling, setIsScrolling] = useState(false);
-   const { setSearchQuery, lstCategoria, setProductosMostrados, products } = useContext(MyContext);
+   const { setSearchQuery, lstCategoria, setProductosMostrados, products, cart} = useContext(MyContext);
    const [inputValue, setInputValue] = useState("");
    const navigate = useNavigate();
 
@@ -100,6 +103,8 @@ function Nav() {
 
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
+                        { cart.length > 0 ? <TotalItems/> : null }
+                        
                      </Link>
                   </div>
                </div>
