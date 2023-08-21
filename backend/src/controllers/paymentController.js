@@ -17,9 +17,9 @@ const createOrder = async (req, res) => {
             }
         ],
         back_urls:{
-            success:"http://localhost:4000/api/success",
-            failure:"http://localhost:4000/api/failure",
-            pending:"http://localhost:4000/api/pending"
+            success:"https://casa-back.onrender.com/api/success",
+            failure:"https://casa-back.onrender.com/api/failure",
+            pending:"https://casa-back.onrender.com/api/pending"
         },
         auto_return: "approved",
     }

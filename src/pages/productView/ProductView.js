@@ -13,7 +13,7 @@ function ProductView() {
 
   const createPreference = async (product) => {
     try {
-      const response = await axios.post("http://localhost:4000/api/create-order", {
+      const response = await axios.post("https://casa-back.onrender.com/api/create-order", {
         description: product.Titulo,
         price: product.PrecioVentaBruto,
         quantity: 1,
@@ -37,7 +37,7 @@ function ProductView() {
     // Fetch the product details using the productId
     const fetchProductDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/product/${id}`);
+        const response = await axios.get(`https://casa-back.onrender.com/api/product/${id}`);
         setProduct(response.data);
         console.log(response.data);
       } catch (error) {
