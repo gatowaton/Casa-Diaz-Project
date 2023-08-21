@@ -24,7 +24,7 @@ export const shoppingInitialState = {
 
 export async function fetchProductsFromApi() {
     try {
-      const response = await fetch('http://localhost:4000/api/product/');
+      const response = await fetch('https://casa-back.onrender.com/api/product/');
       const data = await response.json();
 
       //console.log("DATA desde la API: ", data);
