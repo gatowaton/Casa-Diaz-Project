@@ -116,7 +116,7 @@ function Nav() {
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}
                      onSelect={handleSelect}>
-                     <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                     <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
                            <ul>
