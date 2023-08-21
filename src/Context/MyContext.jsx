@@ -12,6 +12,19 @@ export const ConstextoProvider = (props) => {
    //Agregando contexto de carrito
    const [cart,setCart] = useState([]);
 
+   // Funcion añadir al carrito
+
+   const buyProducts = (product) => {
+      const productRepeat = cart.find((item) => item._id === product._id);
+
+      if (productRepeat){
+         setCart(cart.map((item)=> item._id === product._id ? {...product,quanty: productRepeat.quanty + 1} 
+         : item));
+      } else {
+         setCart([...cart, product]);
+      }
+   };
+
 
 
 
@@ -42,7 +55,8 @@ export const ConstextoProvider = (props) => {
             setProductosMostrados,
             lstCategoria,
             cart,
-            setCart
+            setCart,
+            buyProducts
          }}>
          {props.children}
       </MyContext.Provider>

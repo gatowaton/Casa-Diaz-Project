@@ -4,13 +4,30 @@ import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
 import "./ShoppingCart.css";
 
+import CartItemCounter from "./CartItemCounter";
+
 const ShoppingCart = () => {
-  const { cart } = useContext(MyContext);
+  const { cart, setCart } = useContext(MyContext);
+  
+  const deleteProduct = (id) => {
+    const foundId = cart.find((element) => element._id === id);
+
+    const newCart = cart.filter((element) => {
+      return element !== foundId;
+    });
+
+    setCart(newCart);
+
+  }
+
+
+
+  // Agregado para panel derecho, actualizar 
   const total = cart.reduce((acc, el) => acc + el.PrecioVentaBruto,0);
   const iva = (total * 0.19).toFixed(0);
   const totalSinIva = total - iva;
-  
-  
+
+  /// ACTUALIZAR ESTO
 
   return (
     <div className="container">
@@ -31,6 +48,9 @@ const ShoppingCart = () => {
                   <div class="product-subtotal col-2 fs-5">Subtotal</div>
                 </div>
                 <hr className=""></hr>
+
+
+
                 {cart.map((product) => (
                   <div class="product-item row pb-3" key={product._id}>
                     <div class="product-image-description col-6">
@@ -48,14 +68,26 @@ const ShoppingCart = () => {
                     <div class="product-price col-2">
                       <p>${product.PrecioVentaBruto}</p>
                     </div>
-                    <div class="product-quantity col-2">
+                    <CartItemCounter product={product} quanty = {product.quanty}/>
+
+                    {/* <div class="product-quantity col-2">
                       <input type="number" />
-                    </div>
+                    </div> */}
+
                     <div class="product-subtotal col-2">
-                      <p>${product.PrecioVentaBruto}</p>
+                      <p>${product.PrecioVentaBruto * product.quanty}</p>
                     </div>
+
+                    <div className="cart-delete-button" onClick={() => deleteProduct(product._id)}>
+                      <p>❌</p>
+                    </div>
+
+
                   </div>
                 ))}
+
+
+
               </div>
             </div>
             <div className="d-flex justify-content-end gap-3 ">
