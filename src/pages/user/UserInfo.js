@@ -13,22 +13,38 @@ function UserInfo() {
                   <div className="nav-panel-info-usuario">
                      <ul className="nav flex-column links-panel-info-usuario">
                         <li className="nav-item mi-cuenta">
+<<<<<<< HEAD
+                           <a className="nav-link link-mi-cuenta-usuario" href="www.google.com">
+=======
                            <a className="nav-link link-mi-cuenta-usuario" href="https://www.google.cl/">
+>>>>>>> deployrail
                               <h6 className="texto-panel-izq-cuenta">Mi cuenta</h6>
                            </a>
                         </li>
                         <li className="nav-item panel">
+<<<<<<< HEAD
+                           <a className="nav-link link-panel-usuario" href="www.google.com">
+=======
                            <a className="nav-link link-panel-usuario" href="https://www.google.cl/">
+>>>>>>> deployrail
                               <h6 className="texto-panel-izq-cuenta">Panel</h6>
                            </a>
                         </li>
                         <li className="nav-item informacion">
+<<<<<<< HEAD
+                           <a className="nav-link link-informacion-usuario" href="www.google.com">
+=======
                            <a className="nav-link link-informacion-usuario" href="https://www.google.cl/">
+>>>>>>> deployrail
                               <h6 className="texto-panel-izq-cuenta">Información</h6>
                            </a>
                         </li>
                         <li className="nav-item mis-pedidos-usuario">
+<<<<<<< HEAD
+                           <a className="nav-link link-mis-pedidos-usuario" href="www.google.com">
+=======
                            <a className="nav-link link-mis-pedidos-usuario" href="https://www.google.cl/">
+>>>>>>> deployrail
                               <h6 className="texto-panel-izq-cuenta">Mis pedidos</h6>
                            </a>
                         </li>

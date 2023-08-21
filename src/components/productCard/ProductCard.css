@@ -18,7 +18,7 @@
 
 .product-card img {
    max-width: 100%;
-   height: auto;
+   height: 200px;
    border-radius: 20px;
    object-fit: cover;
 }
@@ -53,22 +53,28 @@
    font-weight: 500;
    font-size: 10px;
 }
+.btn-agregar {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+}
 
 .product-card-button {
    background-color: #facd03;
    color: black;
+<<<<<<< HEAD
+   width: 6rem;
+   height: 1.5rem;
+   margin-top: auto;
+=======
    padding: 10px; 
+>>>>>>> deployrail
    border-radius: 20px;
    border: none;
    font-weight: 700;
    font-size: 10px;
    align-self: center;
    margin: 1em;
-}
-.btn-agregar {
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
 }
 
 .product-card:hover {

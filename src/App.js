@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
@@ -23,16 +23,25 @@ import ProductView from "./pages/productView/ProductView";
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
 
+import InicioSesion from "./pages/InicioSesion/InicioSesion";
+import DespachoRetiro from "./pages/DespachoRetiro/DespachoRetiro";
+import Registro from "./pages/Registro/Registro";
+import Btnws from "./components/btnws/Btnws";
+import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
+
+import CarroDePruebas from "./pages/carroDePruebas/CarroDePruebas";
+import CartElements from "./pages/shoppingCart/CartElements";
+import CartContent from "./pages/shoppingCart/CartContent";
+
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
 
 function App() {
-
    return (
       <AuthProvider>
          <BrowserRouter>
             <Nav />
-            <Routes>
+            <Routes> 
                <Route path="/" element={<Home />} />
                <Route path="register" element={<Register />} />
                <Route path="login" element={<Login />} />
@@ -44,8 +53,21 @@ function App() {
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
                <Route path="/paginapago" element={<PaginaPago />} />
+              
+               <Route path="/despachoretiro" element={<DespachoRetiro/>} />
+               <Route path="/iniciosesion" element={<InicioSesion/>}/>
+               <Route path="/registro" element={<Registro/>} />
+               <Route path="/productDetails/:id" element={<ProductView />} />
+               <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
                <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/carrodepruebas" element={<CarroDePruebas/>}/>
+               <Route path="/elementoscart" element={<CartElements/>}/>
+               <Route path="/carrito2" element={<CartContent/>}/>
+
+
+
             </Routes>
+            <Btnws />
             <Footer />
          </BrowserRouter>
       </AuthProvider>

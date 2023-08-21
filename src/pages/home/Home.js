@@ -7,6 +7,7 @@ import imgnewline from "../../img/nuevalinea1.png";
 import novedades from "../../img/novedades1.png";
 import MyContext from "../../Context/MyContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -23,16 +24,24 @@ function Home() {
             <div className="section_img_filter container">
                <div className="row">
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     <Link to={`/productos-filtrados/Iluminación`}>
+                        <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     <Link to={`/productos-filtrados/Iluminación`}>
+                        <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     <Link to={`/productos-filtrados/Iluminación`}>
+                        <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     <Link to={`/productos-filtrados/Iluminación`}>
+                        <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
+                     </Link>
                   </div>
                </div>
             </div>
@@ -120,7 +129,9 @@ function Home() {
                         Conoce nuestra nueva linea de productos de iluminación. Encuentra plafones, Panel Led, y mucho mas.
                      </p>
                      <div className="ps-4">
-                        <button className="btn_new_line">Ver Producto</button>
+                        <Link to={`/productos-filtrados/Iluminación`}>
+                           <button className="btn_new_line">Ver Producto</button>
+                        </Link>
                      </div>
                   </div>
                   <div className="col-md-8 col-sm-12 text-center ">
@@ -174,20 +185,20 @@ function Home() {
          <div className="section_condiciones container">
             <div className="row py-5">
                <div className="col-lg-4 col-md-6 col-sm-12 text-center ">
-                  <i class="bi bi-box icons-size"></i>
-                  <p className=" fs-4 fw-bold ">Cambios y Devoluciones</p>
+                  <i className="bi bi-box icons-size"></i>
+                  <p className=" fs-4 fw-bold text-center">Cambios y Devoluciones</p>
                   <p className="fs-6 fw-bold">
                      Si tienes algún inconveniente, contáctanos en Asistencia Post Venta y Servicio Técnico.
                   </p>
                </div>
                <div className="col-lg-4 col-md-6 col-sm-12 text-center ">
-                  <i class="bi bi-cash icons-size"></i>
-                  <p className=" fs-4 fw-bold">Formas de pago</p>
+                  <i className="bi bi-cash icons-size"></i>
+                  <p className=" fs-4 fw-bold text-center">Formas de pago</p>
                   <p className=" fs-6 fw-bold">Compra con tarjetas de débito o crédito vía Webpay.</p>
                </div>
                <div className="col-lg-4 col-md-6 col-sm-12 text-center">
-                  <i class="bi bi-chat-left-text-fill icons-size"></i>
-                  <p className=" fs-4 fw-bold ">Asistencia</p>
+                  <i className="bi bi-chat-left-text-fill icons-size"></i>
+                  <p className=" fs-4 fw-bold text-center">Asistencia</p>
                   <p className=" fs-6 fw-bold ">Llámanos al +569 9999 9999 o escríbenos a casadiaz@casadiaz.cl</p>
                </div>
             </div>
