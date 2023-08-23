@@ -8,7 +8,7 @@ const DataProvider = ({children}) => {
     const [cart,setCart] = useState([]);
 
     useEffect(() => {
-        axios("https://casa-back.onrender.com/api/product").then((res)= setData(res.data))
+        axios("http://localhost:4000/api/product").then((res)= setData(res.data))
     },[])
 
     return(

@@ -18,7 +18,7 @@ app.set("port", process.env.PORT || 4000);
 //middlewares: funciones que se ejecutan antes de que llegen a las rutas
 //cada vez que llegue una peticion a mi sv va a poder enviar y recibir datos
 app.use(cors({
-        origin: process.env.FRONTEND_URL,
+        origin: "https://casa-qwcy.onrender.com/",
         credentials: true
 }));
 //que tipo de datos enviara este sv: archivo en formato json// req.body a formato json
