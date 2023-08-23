@@ -41,7 +41,7 @@ function ProductView() {
       // Fetch the product details using the productId
       const fetchProductDetails = async () => {
          try {
-            const response = await axios.get(`http://localhost:4000/api/product/${id}`);
+            const response = await axios.get(`https://casa-back.onrender.com/api/${id}`);
             setProduct(response.data);
             console.log(response.data);
          } catch (error) {

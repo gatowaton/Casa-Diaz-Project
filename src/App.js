@@ -32,6 +32,7 @@ import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProduc
 import CarroDePruebas from "./pages/carroDePruebas/CarroDePruebas";
 import CartElements from "./pages/shoppingCart/CartElements";
 import CartContent from "./pages/shoppingCart/CartContent";
+import ProtectedRoute from "./ProtectedRoute";
 
 
 emailjs.init("xMUu3Z8O9QKDWSVeO");
@@ -47,13 +48,10 @@ function App() {
                <Route path="login" element={<Login />} />
                <Route path="/carrito" element={<ShoppingCart />} />
                <Route path="/empresa" element={<Company />} />
-               <Route path="/admin" element={<Dashboard />} />
-               <Route path="/usuario" element={<UserInfo />} />
                <Route path="/contacto" element={<Contact />} />
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
-               <Route path="/paginapago" element={<PaginaPago />} />
-              
+               <Route path="/paginapago" element={<PaginaPago />} /> 
                <Route path="/despachoretiro" element={<DespachoRetiro/>} />
                <Route path="/iniciosesion" element={<InicioSesion/>}/>
                <Route path="/registro" element={<Registro/>} />
@@ -63,6 +61,11 @@ function App() {
                <Route path="/carrodepruebas" element={<CarroDePruebas/>}/>
                <Route path="/elementoscart" element={<CartElements/>}/>
                <Route path="/carrito2" element={<CartContent/>}/>
+               
+               <Route element={<ProtectedRoute/>}>
+               <Route path="/user" element={<UserInfo/>} />
+               <Route path="/admin" element={<Dashboard />} />
+               </Route>
 
 
 
