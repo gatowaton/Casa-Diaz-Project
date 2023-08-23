@@ -5,6 +5,8 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 function ProductCard({ numToShow }) {
+
+
    const { products, searchQuery,buyProducts } = useContext(MyContext);
 
 

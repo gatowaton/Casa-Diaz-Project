@@ -21,7 +21,8 @@ app.set("port", process.env.PORT || 4000);
 app.use(cors({
         origin: "https://casa-qwcy.onrender.com",
         credentials: true
-}));
+    }));
+    
 //que tipo de datos enviara este sv: archivo en formato json// req.body a formato json
 app.use(express.json());
 
