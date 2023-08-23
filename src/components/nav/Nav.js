@@ -104,6 +104,8 @@ function Nav() {
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
                         { cart.length > 0 ? <TotalItems/> : null }
+
+                        
                         
                      </Link>
                   </div>

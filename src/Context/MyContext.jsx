@@ -13,6 +13,7 @@ export const ConstextoProvider = (props) => {
 
    const [cart, setCart] = useState(() => {
       const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+      console.log("carrito salvado", savedCart)
       return savedCart;
     });
    
@@ -21,15 +22,27 @@ export const ConstextoProvider = (props) => {
 
    const buyProducts = (product) => {
       const productRepeat = cart.find((item) => item._id === product._id);
-
-      if (productRepeat){
-         setCart(cart.map((item)=> item._id === product._id ? {...product,quanty: productRepeat.quanty + 1} 
-         : item));
+    
+      if (productRepeat) {
+        setCart(
+          cart.map((item) =>
+            item._id === product._id
+              ? {
+                  ...item,
+                  quantity: (item.quantity || 0) + 1,
+                }
+              : item
+          )
+        );
       } else {
-         setCart([...cart, product]);
-         localStorage.setItem("cart", JSON.stringify([...cart, product]));
+        setCart([...cart, { ...product, quantity: 1 }]);
+        localStorage.setItem("cart", JSON.stringify([...cart, { ...product, quantity: 1 }]));
+      console.log("carrito agregado",cart)
+
       }
-   };
+      console.log("carrito agregado",cart)
+    };
+    
 
 
 

@@ -69,14 +69,14 @@ const ShoppingCart = () => {
                     <div className="product-price col-2">
                       <p>${product.PrecioVentaBruto}</p>
                     </div>
-                    <CartItemCounter product={product} quanty = {product.quanty}/>
+                    <CartItemCounter product={product} quantity = {product.quantity ? product.quantity : 1}/>
 
                     {/* <div className="product-quantity col-2">
                       <input type="number" />
                     </div> */}
 
                     <div className="product-subtotal col-2">
-                      <p>${product.PrecioVentaBruto * product.quanty}</p>
+                      <p>${product.PrecioVentaBruto * product.quantity}</p>
                     </div>
 
                     <div className="cart-delete-button" onClick={() => deleteProduct(product._id)}>

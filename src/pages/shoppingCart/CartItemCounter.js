@@ -1,16 +1,29 @@
 import MyContext from "../../Context/MyContext";
 import { useContext } from "react";
 
-const CartItemCounter = ({quanty, product}) => {
+const CartItemCounter = ({quantity, product}) => {
   const {cart, setCart, buyProducts } = useContext(MyContext);
 
   const decrease = () => {
     const productRepeat = cart.find((item) => item._id === product._id);
 
-    productRepeat.quanty !== 1 &&
-    setCart(cart.map((item)=> item._id === product._id ? 
-    {...product,quanty: productRepeat.quanty - 1} : item));
-  };
+    if (productRepeat && productRepeat.quantity !== 1) {
+      setCart(
+         cart.map((item) =>
+            item._id === product._id
+               ? {
+                    ...product,
+                    quantity: productRepeat.quantity
+                      ? productRepeat.quantity - 1
+                      : 1,
+                 }
+               : item
+         )
+    
+    
+    );
+  }
+};
 
 
   return (
@@ -21,7 +34,7 @@ const CartItemCounter = ({quanty, product}) => {
 
       <div className="product-quantity col-2">
         <p className="counter-button" onClick={decrease}>-</p>
-        <p>{quanty}</p>
+        <p>{quantity}</p>
         <p className="counter-button" onClick={() => buyProducts(product)}>+</p>
       </div>
     </>
@@ -29,3 +42,4 @@ const CartItemCounter = ({quanty, product}) => {
 };
 
 export default CartItemCounter;
+

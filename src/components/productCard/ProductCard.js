@@ -15,6 +15,7 @@ function ProductCard({ numToShow }) {
 
    return (
       <div className="product-card-container">
+
          {filteredProducts.slice(0, numToShow).map((product) => (
             <div className="product-card" key={product._id}>
                <img className="card-img-size" src={product.Foto} alt="" />
