@@ -40,7 +40,7 @@ export const ConstextoProvider = (props) => {
          setProducts(response.data);
          setProductosMostrados(response.data);
       } catch (error) {
-         console.error(error);
+         console.log(error);
       }
    };
 
