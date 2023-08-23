@@ -3,12 +3,13 @@ import CartTotal from "./CartTotal";
 
 import "./CartContent.css"
 
-import { useContext } from "react";
+import { useContext,} from "react";
 import {MyContext} from "../../Context/MyContext";
 
 import React from 'react'
 
 const CartContent = () => {
+    
     const {cart} = useContext(MyContext);
 
     // condicion ) "" : "" 

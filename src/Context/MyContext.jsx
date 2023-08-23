@@ -14,17 +14,45 @@ export const ConstextoProvider = (props) => {
 
    // Funcion añadir al carrito
 
-   const buyProducts = (product) => {
+/*    const buyProducts = (product) => {
       const productRepeat = cart.find((item) => item._id === product._id);
-
-      if (productRepeat){
-         setCart(cart.map((item)=> item._id === product._id ? {...product,quanty: productRepeat.quanty + 1} 
-         : item));
+   
+      if (productRepeat) {
+         const updatedCart = cart.map((item) =>
+            item._id === product._id ? { ...product, quanty: productRepeat.quanty + 1 } : item
+         );
+         setCart(updatedCart);
       } else {
          setCart([...cart, product]);
       }
    };
+   
+   useEffect(() => {
+      localStorage.setItem("cart", JSON.stringify(cart));
+   }, [cart]); */
 
+   const buyProducts = (product) => {
+      const productRepeat = cart.find((item) => item._id === product._id);
+   
+      if (productRepeat) {
+         const updatedCart = cart.map((item) =>
+            item._id === product._id ? { ...product, quanty: productRepeat.quanty + 1 } : item
+         );
+         setCart(updatedCart);
+      } else {
+         setCart([...cart, product]);
+      }
+   };
+   
+/*    useEffect(() => {
+      localStorage.setItem("cart", JSON.stringify(cart));
+   }, [cart]);
+ */
+
+   useEffect(() => {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
+   
 
 
 
