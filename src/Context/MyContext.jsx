@@ -10,7 +10,12 @@ export const ConstextoProvider = (props) => {
    const lstCategoria = ["Iluminación", "Canalización", "Electricidad", "Ferretería y Gasfitería"];
 
    //Agregando contexto de carrito
-   const [cart,setCart] = useState([]);
+
+   const [cart, setCart] = useState(() => {
+      const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+      return savedCart;
+    });
+   
 
    // Funcion añadir al carrito
 
@@ -22,6 +27,7 @@ export const ConstextoProvider = (props) => {
          : item));
       } else {
          setCart([...cart, product]);
+         localStorage.setItem("cart", JSON.stringify([...cart, product]));
       }
    };
 
@@ -32,6 +38,8 @@ export const ConstextoProvider = (props) => {
 
    useEffect(() => {
       fetchProducts();
+      const savedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+  setCart(savedCart);
    }, []);
 
    const fetchProducts = async () => {

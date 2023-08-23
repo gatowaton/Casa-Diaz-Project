@@ -17,6 +17,7 @@ const ShoppingCart = () => {
     });
 
     setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
 
   }
 
@@ -40,41 +41,41 @@ const ShoppingCart = () => {
           <div className="box-cart">
             <div>{cart.length} Productos en el carro de compras</div>
             <div className="tabla-cart">
-              <div class="product-list">
+              <div className="product-list">
                 <div className="product-tittle row pt-2">
                   <div className="product-item-tittle col-6 fs-5">Producto</div>
-                  <div class="product-price-tittle col-2 fs-5">Precio</div>
-                  <div class="product-quantity-tittle col-2 fs-5">Cantidad</div>
-                  <div class="product-subtotal col-2 fs-5">Subtotal</div>
+                  <div className="product-price-tittle col-2 fs-5">Precio</div>
+                  <div className="product-quantity-tittle col-2 fs-5">Cantidad</div>
+                  <div className="product-subtotal col-2 fs-5">Subtotal</div>
                 </div>
                 <hr className=""></hr>
 
 
 
                 {cart.map((product) => (
-                  <div class="product-item row pb-3" key={product._id}>
-                    <div class="product-image-description col-6">
+                  <div className="product-item row pb-3" key={product._id}>
+                    <div className="product-image-description col-6">
                       <div className="d-flex">
                         <div className="product-image">
                           <img src={product.Foto} alt="Imagen del producto" />
                         </div>
-                        <div class="product-description ps-3">
+                        <div className="product-description ps-3">
                           <span>SKU {product.CodigoProducto}</span>
                           <p>{product.Titulo}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div class="product-price col-2">
+                    <div className="product-price col-2">
                       <p>${product.PrecioVentaBruto}</p>
                     </div>
                     <CartItemCounter product={product} quanty = {product.quanty}/>
 
-                    {/* <div class="product-quantity col-2">
+                    {/* <div className="product-quantity col-2">
                       <input type="number" />
                     </div> */}
 
-                    <div class="product-subtotal col-2">
+                    <div className="product-subtotal col-2">
                       <p>${product.PrecioVentaBruto * product.quanty}</p>
                     </div>
 
@@ -100,8 +101,8 @@ const ShoppingCart = () => {
           <div className="box-cart-result p-3">
             <h5 className="p-2">RESUMEN DE COMPRA</h5>
             <button className="btn-cotizar">Cotizar</button>
-            <div class="mb-3 py-3">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div className="mb-3 py-3">
+              <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div className="text-start">
               <div className="">Estimado Retiro / Despacho</div>
