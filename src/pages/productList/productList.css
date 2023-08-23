@@ -1,8 +1,8 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    padding: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    padding: 1cm;
   }
   
   .pagination-bar {
@@ -17,4 +17,17 @@
     border-radius: 15px;
     border: 1px solid black;
     text-align: center;
+  }
+
+
+  .product-list-container {
+    display: flex;
+    padding: 1cm
+  }
+
+
+  .checkbox-list{
+    display: flex;
+    align-items: center;
+    
   }

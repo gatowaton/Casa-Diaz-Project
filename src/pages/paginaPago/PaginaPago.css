@@ -1,0 +1,57 @@
+
+.container-pagina-pago{
+    margin-top: 20px;
+}
+
+.texto-pequeño{
+    font-size: smaller;
+}
+
+.img-producto{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.contenedor-imagen-mas-texto{
+    display: flex;
+    /* align-items: center; */
+}
+.contenedor-texto-abajo-imagen{
+    display: flex;
+    align-items: center;
+}
+
+.separador {
+    border-top: 1px solid white;
+    padding-top: 20px 0;
+    padding-bottom: 20px;
+  }
+
+  .separador-negro{
+    border-top: 1px solid black;
+    padding-top: 20px ;
+    padding-bottom: 20px;
+  }
+
+.texto-precio{
+    display: block;
+}
+.btn-pagina-pago{
+    background-color: #FACD03;
+    color: black;
+    border-radius: 30px;
+    width: 100%;
+}
+.form-enviar-pago{
+    background-color:#2E3532;
+}
+
+.texto-col-derecha{
+    color: white;
+}
+
+.col-izq-pagina-pago{
+    margin-bottom: 40px;
+
+}

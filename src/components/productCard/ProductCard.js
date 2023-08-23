@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import MyContext from "../../Context/MyContext";
+import { useContext } from "react";
+import React from "react";
 import "./ProductCard.css";
+import { Link } from "react-router-dom";
 
-function ProductCard() {
-   const [products, setProducts] = useState([]);
+function ProductCard({ numToShow }) {
+   const { products, searchQuery } = useContext(MyContext);
 
-   useEffect(() => {
-      fetchProducts();
-   }, []);
-
-   const fetchProducts = async () => {
-      try {
-         const response = await axios.get("http://localhost:4000/api/product/");
-         setProducts(response.data);
-      } catch (error) {
-         console.error(error);
-      }
-   };
+   const filteredProducts =
+      searchQuery !== ""
+         ? products.filter((product) => product.Titulo.toLowerCase().includes(searchQuery.toLowerCase()))
+         : products;
 
    return (
       <div className="product-card-container">
-         {products.map((product) => (
-            <div className="product-card">
+         {filteredProducts.slice(0, numToShow).map((product) => (
+            <div className="product-card" key={product._id}>
                <img src={product.Foto} alt="" />
                <div className="product-card-content">
                   <span className="sku_marca">SKU {product.CodigoProducto}</span>
@@ -34,6 +28,9 @@ function ProductCard() {
                </div>
                <div className="btn-agregar pt-3">
                   <button className="product-card-button">Agregar al Carrito</button>
+                  <Link to={`/productDetails/${product._id}`}>
+                     <button className="product-card-button">Detalles</button>
+                  </Link>
                </div>
             </div>
          ))}

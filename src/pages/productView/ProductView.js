@@ -1,107 +1,87 @@
-import React from "react";
-import Nav from "../../components/nav/Nav";
-import Bobina from "../../img/bobina.jpg";
-import Interruptor from "../../img/interruptor.png";
-import Casadiazlogo from "../../img/casadiazlogo.png";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
+
 
 import "./ProductView.css";
 
-function ProductView() {
-  return (
-    <div>
-      <Nav />
-      <div className="productView-block">
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide productView"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={Bobina}
-              className="d-block w-100 img-productView"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={Interruptor}
-              className="d-block w-100 img-productView"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={Casadiazlogo}
-              className="d-block w-100 img-productView"
-              alt="..."
-            />
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div className="productView-info">
-        <div>
-            <span>sku: 5456498</span>
-            <h1>
-            Cable solarflex H1Z2Z2-K 4mm Rojo
-            Libre De Halogeno 1800 VDC
-            </h1>
-        </div>
-        <div>
-            <button>Add to Cart</button>
-        </div>
-      </div>
-      </div>
 
+  
+
+function ProductView() {
+  const { id} = useParams();
+  const [product, setProduct] = useState(null);
+  const [preferenceId, setPreferenceId] = useState(null);
+  initMercadoPago('TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22');
+
+  const createPreference = async (product) => {
+    try {
+      const response = await axios.post("http://localhost:4000/api/create-order", {
+        description: product.Titulo,
+        price: product.PrecioVentaBruto,
+        quantity: 1,
+        picture_url:  product.Foto,
+      });
+      const { id } = response.data;
+      return id;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleBuy = async (product) => {
+    const id = await createPreference(product);
+    if (id) {
+      setPreferenceId(id);
+    }
+  }
+
+  useEffect(() => {
+    // Fetch the product details using the productId
+    const fetchProductDetails = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4000/api/product/${id}`);
+        setProduct(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchProductDetails();
+  }, [id]);
+
+  
+
+
+
+  return (
+  <div>  
+    <div className="productView-block">
+      <div className="productView-info">
+        {product ? (
+         <div>
+           <div>
+              <img src={product.Foto} alt={product.Titulo} />
+           </div>
+           <h2>{product.Categoria}</h2>
+            <h1>{product.Titulo}</h1>
+           <p>{product.PrecioVentaBruto}</p>
+           <p>{product.CodigoProducto}</p>
+           <button onClick={()=> handleBuy(product)} className="product-card-button">Comprar</button>
+              {preferenceId && <Wallet initialization={{ preferenceId }} />}
+          </div>
+        ) : (
+          <div>Loading...</div>
+       )}
+      </div>
     </div>
+   
+  </div>  
+
   );
 }
 
 export default ProductView;
+

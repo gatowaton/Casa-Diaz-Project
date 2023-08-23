@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './productDetails.css';
-import FotoProducto from "../../img/bobina.jpg";
-import miniCard from "../../components/filter/filter"
+import FotoProducto from "../../img/bobina.jpg"
 
 const ProductCard = () => {
   const [quantity, setQuantity] = useState(1);
