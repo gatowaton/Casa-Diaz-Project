@@ -54,6 +54,9 @@ const deleteProduct = (id) => {
   const iva = (total * 0.19).toFixed(0);
   const totalSinIva = total - iva;
 
+
+  
+
   /// ACTUALIZAR ESTO
 
   return (
