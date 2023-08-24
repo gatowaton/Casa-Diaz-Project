@@ -34,7 +34,7 @@ import CartContent from "./pages/shoppingCart/CartContent";
 import ProtectedRoute from "./ProtectedRoute";
 
 
-emailjs.init("xMUu3Z8O9QKDWSVeO");
+emailjs.init(process.env.REACT_APP_EMAIL);
 
 function App() {
    return (
