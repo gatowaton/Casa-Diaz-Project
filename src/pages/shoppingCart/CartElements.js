@@ -10,6 +10,7 @@ import "./ShoppingCart.css";
 import CartItemCounter from "./CartItemCounter";
 
 const ShoppingCart = () => {
+
   //initMercadoPago("TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22");
 
   const { cart, setCart,total } = useContext(MyContext);
@@ -130,7 +131,15 @@ const ShoppingCart = () => {
                     </div> */}
 
 
+
+                              <div className="cart-delete-button" onClick={() => deleteProduct(product._id)}>
+                                 <p>❌</p>
+                              </div>
+                           </div>
+                        ))}
+                     </div>
                   </div>
+
                 ))}
 
 
@@ -170,13 +179,11 @@ const ShoppingCart = () => {
                 <div className="">${total}</div>
               </div>
               
+
             </div>
-            <button className="btn-pay ">Continuar al pago</button>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  );
+   );
 };
 
 export default ShoppingCart;

@@ -61,6 +61,9 @@ function Nav() {
          <div className="mega-navbar-block-0">
             <div className="container">
                <div className="mega-navbar-block-0-1">
+                     <Link to="/admin">
+                        <samp>Dashboard</samp>
+                     </Link>
                   <div>
                      <PinDropIcon />
                      <samp>Sucursales</samp>
@@ -97,8 +100,12 @@ function Nav() {
                   </div>
 
                   <div className="mega-navbar-block-1-2">
-                     <input type="button" value="Ingresar" />
-
+                     <Link to="/login">
+                        <input type="button" value="Ingresar" />
+                     </Link>
+                     <Link to="/register">
+                        <input type="button" value="Registrarse" />
+                     </Link>
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
 

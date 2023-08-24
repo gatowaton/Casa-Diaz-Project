@@ -61,7 +61,11 @@ function ProductView() {
                   <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                      Inicio
                   </Link>{" "}
-                  / {product.Categoria} / {product.Titulo}
+                  /{" "}
+                  <Link to={`/productos-filtrados/${product.Categoria}`} style={{ color: "black", textDecoration: "none" }}>
+                     {product.Categoria}
+                  </Link>{" "}
+                  / {product.Titulo}
                </p>
                <div className="row pb-4">
                   <div className="col-5">
