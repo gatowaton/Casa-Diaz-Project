@@ -7,10 +7,7 @@ import MyContext from "../../Context/MyContext";
 
 
 export const CartTotal = () => {
-    const { cart } = useContext(MyContext);
-
-    const total = cart.reduce((acc, el) => acc + el.PrecioVentaBruto * el.quantity,0);
-
+    const { total } = useContext(MyContext);
 
   return (
     <div className="cartTotal">

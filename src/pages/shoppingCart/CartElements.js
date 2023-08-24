@@ -1,14 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext} from "react";
 import MyContext from "../../Context/MyContext";
 import "./ShoppingCart.css";
+
+//import axios from "axios";
+//import { Wallet, initMercadoPago } from "@mercadopago/sdk-react"; 
 
 import CartItemCounter from "./CartItemCounter";
 
 const ShoppingCart = () => {
-  const { cart, setCart } = useContext(MyContext);
-  
+  //initMercadoPago("TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22");
+
+  const { cart, setCart,total } = useContext(MyContext);
+  //const [preferenceId, setPreferenceId] = useState(null);
+
+  // poniendole mercado pago a el carrito
+/* 
+  useEffect(() => {
+    const createPreference = async () => {
+      try {
+        const response = await axios.post("http://localhost:4000/api/create-order", {
+          // Puedes ajustar esta parte según tu API y estructura de datos
+          items: cart.map(item => ({
+            title: item.Titulo,
+            unit_price: item.PrecioVentaBruto,
+            quantity: parseInt(item.quantity),
+          })),
+        });
+        const { id } = response.data;
+        setPreferenceId(id);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    createPreference();
+  }, [cart]);
+ */
+
+
+  // Boton eliminar producto carrito
   const deleteProduct = (id) => {
     const foundId = cart.find((element) => element._id === id);
 
@@ -21,10 +53,14 @@ const ShoppingCart = () => {
 
   }
 
-
+  //const total = useContext(TotalContext);
 
   // Agregado para panel derecho, actualizar 
-  const total = cart.reduce((acc, el) => acc + el.PrecioVentaBruto,0);
+
+  /* const total = cart.reduce((acc, el) => acc + el.PrecioVentaBruto,0);
+  const iva = (total * 0.19).toFixed(0);
+  const totalSinIva = total - iva; */
+
   const iva = (total * 0.19).toFixed(0);
   const totalSinIva = total - iva;
 
@@ -82,6 +118,16 @@ const ShoppingCart = () => {
                     <div className="cart-delete-button" onClick={() => deleteProduct(product._id)}>
                       <p>❌</p>
                     </div>
+                    {/* <div>
+                    {preferenceId && (
+                    <Wallet
+                      initialization={{ preferenceId }}
+                      checkoutButton={{
+                        color: "#009EE3", // Personaliza el color del botón de pago
+                        }}
+                      />
+                      )}
+                    </div> */}
 
 
                   </div>
@@ -107,6 +153,8 @@ const ShoppingCart = () => {
             <div className="text-start">
               <div className="">Estimado Retiro / Despacho</div>
               <hr></hr>
+
+
               <div className="d-flex justify-content-between">
                 <div className="">Impuestos</div>
                 <div className="">${iva}</div>
@@ -121,6 +169,7 @@ const ShoppingCart = () => {
                 <div className="">Total con IVA</div>
                 <div className="">${total}</div>
               </div>
+              
             </div>
             <button className="btn-pay ">Continuar al pago</button>
           </div>

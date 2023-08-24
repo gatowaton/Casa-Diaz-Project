@@ -3,11 +3,16 @@ import axios from "axios";
 
 export const MyContext = createContext({});
 
+
+
 export const ConstextoProvider = (props) => {
    const [searchQuery, setSearchQuery] = useState("");
    const [productosMostrados, setProductosMostrados] = useState([]);
    const [products, setProducts] = useState([]);
    const lstCategoria = ["Iluminación", "Canalización", "Electricidad", "Ferretería y Gasfitería"];
+
+   
+
 
    //Agregando contexto de carrito
 
@@ -42,11 +47,9 @@ export const ConstextoProvider = (props) => {
       }
       console.log("carrito agregado",cart)
     };
+
+
     
-
-
-
-
 
 
    useEffect(() => {
@@ -65,6 +68,19 @@ export const ConstextoProvider = (props) => {
       }
    };
 
+   // Total de la compra 
+   const [total,setTotal] = useState(0);
+
+   useEffect(()=> {
+      const calculatedTotal = cart.reduce((acc, el) => acc + el.PrecioVentaBruto * el.quantity, 0);
+      setTotal(calculatedTotal);
+   },[cart]);
+
+
+
+
+
+
    return (
       <MyContext.Provider
          value={{
@@ -77,7 +93,8 @@ export const ConstextoProvider = (props) => {
             lstCategoria,
             cart,
             setCart,
-            buyProducts
+            buyProducts,
+            total
          }}>
          {props.children}
       </MyContext.Provider>
