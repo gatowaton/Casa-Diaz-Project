@@ -67,7 +67,7 @@
    & input {
       background-color: #facd03;
       color: white;
-      margin: auto 1em;
+      margin: auto 0.5em;
       width: 6em;
       border-radius: 20px;
       font-weight: medium;

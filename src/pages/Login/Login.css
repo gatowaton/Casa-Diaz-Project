@@ -1,0 +1,6 @@
+.register-link{
+    color: black;
+    & strong{
+        color: black;
+    }
+}

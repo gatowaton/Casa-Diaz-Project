@@ -103,9 +103,6 @@ function Nav() {
                      <Link to="/login">
                         <input type="button" value="Ingresar" />
                      </Link>
-                     <Link to="/register">
-                        <input type="button" value="Registrarse" />
-                     </Link>
                      <Link className="seeCarrito" to={"/carrito2"}>
                         <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
                         {cart.length > 0 ? <TotalItems /> : null}

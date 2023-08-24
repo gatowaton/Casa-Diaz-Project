@@ -37,7 +37,7 @@ function Login() {
         <button type="submit">Login</button>
       </form>
 
-      <p>¿No tienes cuenta? <Link to={"/register"}><strong>Registrate</strong></Link></p>
+      <p className='register-link'>¿No tienes cuenta? <Link to="/register"><strong>Registrate</strong></Link></p>
     </div>
   )
 }
