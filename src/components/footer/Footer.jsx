@@ -1,6 +1,7 @@
 import React from "react";
 import logofooter from "../../img/casadiazlogoblanco.png";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
@@ -19,12 +20,14 @@ const Footer = () => {
                      <p className="text-center fs-4 fw-bold text-light">Clientes</p>
                      <ul>
                         <li className="fs-5 text-light">
-                           <a href="/register">Registrate</a>
+                           <Link to={`/register`}>Registrate</Link>
                         </li>
                         <li className="fs-5 text-light">
-                           <a href="/cambiosdevoluciones">Cambios y devolucions</a>
+                           <Link to={`/cambiosdevoluciones`}>Cambios y devolucions</Link>
                         </li>
-                        <li className="fs-5 text-light">Despacho y retiro</li>
+                        <li className="fs-5 text-light">
+                           <Link to={`/despachoretiro`}>Despacho y retiro</Link>
+                        </li>
                         <li className="fs-5 text-light">Terminos y condiciones</li>
                      </ul>
                   </div>
@@ -32,10 +35,10 @@ const Footer = () => {
                      <p className="text-center fs-4 fw-bold text-light">Empresa</p>
                      <ul>
                         <li className="fs-5 text-light">
-                           <a href="/empresa">Nuestra empresa</a>
+                           <Link to={`/empresa`}>Nuestra empresa</Link>
                         </li>
                         <li className="fs-5 text-light">
-                           <a href="/contacto">Contactanos</a>
+                           <Link to={`/contacto`}>Contactanos</Link>
                         </li>
                      </ul>
                   </div>
