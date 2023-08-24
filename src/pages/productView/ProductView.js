@@ -9,7 +9,7 @@ import MyContext from "../../Context/MyContext";
 import "./ProductView.css";
 
 function ProductView() {
-   const { products } = useContext(MyContext);
+   const { products, buyProducts} = useContext(MyContext);
    const { id } = useParams();
    const [product, setProduct] = useState(null);
    const [preferenceId, setPreferenceId] = useState(null);
@@ -61,7 +61,11 @@ function ProductView() {
                   <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                      Inicio
                   </Link>{" "}
-                  / {product.Categoria} / {product.Titulo}
+                  /{" "}
+                  <Link to={`/productos-filtrados/${product.Categoria}`} style={{ color: "black", textDecoration: "none" }}>
+                     {product.Categoria}
+                  </Link>{" "}
+                  / {product.Titulo}
                </p>
                <div className="row pb-4">
                   <div className="col-5">
@@ -79,7 +83,7 @@ function ProductView() {
                            <input type="Number" min={0} />
                         </div>
                         <div className="px-1">
-                           <button className="product-card-button ">Agregar al Carrito</button>
+                           <button onClick={() => buyProducts(product)} className="product-card-button ">Agregar al Carrito</button>
                         </div>
                         <div>
                            <button onClick={() => handleBuy(product)} className="product-card-button">

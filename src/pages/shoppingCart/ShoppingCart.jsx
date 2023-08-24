@@ -6,10 +6,10 @@ import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
 
 const ShoppingCart = () => {
-   const {cart} = useContext(MyContext);
+   const { cart } = useContext(MyContext);
 
-      return (
-         <div className="container">
+   return (
+      <div className="container">
          <div className="pt-2">
             <Link to="/">Inicio</Link> / Carro de compras
          </div>
@@ -19,8 +19,7 @@ const ShoppingCart = () => {
                <div className="box-cart">
                   <div>2 Productos en el carro de compras</div>
                   <div className="tabla-cart">
-                     
-                           <div class="product-list">
+                     <div class="product-list">
                         <div className="product-tittle row pt-2">
                            <div className="product-item-tittle col-6 fs-5">Producto</div>
                            <div class="product-price-tittle col-2 fs-5">Precio</div>
@@ -75,8 +74,6 @@ const ShoppingCart = () => {
                            </div>
                         </div>
                      </div>
-                    
-                     
                   </div>
                   <div className="d-flex justify-content-end gap-3 ">
                      <button className="btn-cart-delete px-2">Borrar todos los productos</button>
@@ -119,13 +116,7 @@ const ShoppingCart = () => {
             </div>
          </div>
       </div>
-      )
-
-
-      
-
-     
-      
+   );
 };
 
 export default ShoppingCart;
