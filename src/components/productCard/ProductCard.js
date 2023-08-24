@@ -5,10 +5,7 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 function ProductCard({ numToShow }) {
-
-
-   const { products, searchQuery,buyProducts } = useContext(MyContext);
-
+   const { products, searchQuery, buyProducts } = useContext(MyContext);
 
    const filteredProducts =
       searchQuery !== ""
@@ -17,7 +14,6 @@ function ProductCard({ numToShow }) {
 
    return (
       <div className="product-card-container">
-
          {filteredProducts.length === 0 ? (
             <p>No se consigue ese producto</p>
          ) : (
@@ -32,25 +28,14 @@ function ProductCard({ numToShow }) {
                         ${product.PrecioVentaBruto}
                         <span className="iva_color ps-1">IVA INCLUIDO</span>
                      </span>
-                </div>
-               <div className="btn-agregar pt-3">
-                  <div>
+                  </div>
+                  <div className="btn-agregar pt-3">
                      <button onClick={() => buyProducts(product)} className="product-card-button">
                         Agregar al Carrito
                      </button>
-
-                  </div>
-                  <div className="btn-agregar pt-3">
-                     <div>
-                        <button onClick={() => buyProducts(product)} className="product-card-button">
-                           Agregar al Carrito
-                        </button>
-                     </div>
-                     <div>
-                        <Link to={`/productDetails/${product._id}`}>
-                           <button className="product-card-button">Detalles</button>
-                        </Link>
-                     </div>
+                     <Link to={`/productDetails/${product._id}`}>
+                        <button className="product-card-button">Detalles</button>
+                     </Link>
                   </div>
                </div>
             ))
