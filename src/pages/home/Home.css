@@ -43,6 +43,10 @@
    color: #facd03;
    font-size: 5em;
 }
+a {
+   color: #fff;
+   text-decoration: none;
+}
 
 /* Estilos para pantallas medianas */
 @media (max-width: 991px) {

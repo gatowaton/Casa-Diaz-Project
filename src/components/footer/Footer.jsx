@@ -18,8 +18,12 @@ const Footer = () => {
                   <div className="col-md-4 col-sm-12">
                      <p className="text-center fs-4 fw-bold text-light">Clientes</p>
                      <ul>
-                        <li className="fs-5 text-light">Registrate</li>
-                        <li className="fs-5 text-light">Cambios y devoluciones</li>
+                        <li className="fs-5 text-light">
+                           <a href="/register">Registrate</a>
+                        </li>
+                        <li className="fs-5 text-light">
+                           <a href="/cambiosdevoluciones">Cambios y devolucions</a>
+                        </li>
                         <li className="fs-5 text-light">Despacho y retiro</li>
                         <li className="fs-5 text-light">Terminos y condiciones</li>
                      </ul>
@@ -27,8 +31,12 @@ const Footer = () => {
                   <div className="col-md-4 col-sm-12">
                      <p className="text-center fs-4 fw-bold text-light">Empresa</p>
                      <ul>
-                        <li className="fs-5 text-light">Nuestra empresa</li>
-                        <li className="fs-5 text-light">Contactanos</li>
+                        <li className="fs-5 text-light">
+                           <a href="/empresa">Nuestra empresa</a>
+                        </li>
+                        <li className="fs-5 text-light">
+                           <a href="/contacto">Contactanos</a>
+                        </li>
                      </ul>
                   </div>
                </div>
