@@ -60,11 +60,11 @@ export const ConstextoProvider = (props) => {
 
    const fetchProducts = async () => {
       try {
-         const response = await axios.get("http://localhost:4000/api/product/");
+         const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/product/`);
          setProducts(response.data);
          setProductosMostrados(response.data);
       } catch (error) {
-         console.error(error);
+         console.log(error);
       }
    };
 

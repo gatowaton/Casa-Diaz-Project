@@ -24,7 +24,7 @@ export const shoppingInitialState = {
 
 export async function fetchProductsFromApi() {
     try {
-      const response = await fetch('http://localhost:4000/api/product/');
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/product/`);
       const data = await response.json();
 
       //console.log("DATA desde la API: ", data);

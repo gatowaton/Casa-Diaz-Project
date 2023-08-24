@@ -16,6 +16,17 @@
    width: 32em;
    height: 32em;
 }
+.product-detail-btn{
+    background-color: #facd03;
+    color: black;
+    padding: 15px; 
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    font-size: 25px;
+    align-self: center;
+    margin: 1em;
+}
 
 .product-card-price-detail {
    color: #facd03;

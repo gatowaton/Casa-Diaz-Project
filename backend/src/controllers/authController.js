@@ -1,6 +1,7 @@
 const UserModel = require("../models/userModel");
 const bcryptjs = require("bcryptjs");
 const { createAccessToken } = require("../libs/jwt");
+const jwt = require("jsonwebtoken")
 
 const register = async (req, res) => {
    const { email, password, username } = req.body;
@@ -80,7 +81,24 @@ const profile = async (req, res) => {
       createdAt: userFound.createdAt,
    });
 
-   res.send("profile");
 };
 
-module.exports = { login, register, logout, profile };
+   const verifyToken = async (req, res) => {
+   const { token } = req.cookies;
+   if (!token) return res.send(false);
+ 
+   jwt.verify(token, process.env.TOKEN_SECRET , async (error, user) => {
+     if (error) return res.sendStatus(401);
+ 
+     const userFound = await UserModel.findById(user.id);
+     if (!userFound) return res.sendStatus(401);
+ 
+     return res.json({
+      id: userFound._id,
+       username: userFound.username,
+       email: userFound.email,
+     });
+   });
+ };
+
+module.exports = { login, register, logout, profile, verifyToken };
