@@ -13,11 +13,11 @@ function ProductView() {
    const { id } = useParams();
    const [product, setProduct] = useState(null);
    const [preferenceId, setPreferenceId] = useState(null);
-   initMercadoPago("TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22");
+   initMercadoPago(process.env.REACT_APP_MERCADO_FRONT);
 
    const createPreference = async (product) => {
       try {
-         const response = await axios.post("https://casa-back.onrender.com/api/create-order", {
+         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/create-order`, {
             description: product.Titulo,
             price: product.PrecioVentaBruto,
             quantity: 1,
@@ -41,7 +41,7 @@ function ProductView() {
       // Fetch the product details using the productId
       const fetchProductDetails = async () => {
          try {
-            const response = await axios.get(`https://casa-back.onrender.com/api/product/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/product/${id}`);
             setProduct(response.data);
             console.log(response.data);
          } catch (error) {
