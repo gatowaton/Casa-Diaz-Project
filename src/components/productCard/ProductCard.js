@@ -17,6 +17,7 @@ function ProductCard({ numToShow }) {
 
    return (
       <div className="product-card-container">
+
          {filteredProducts.length === 0 ? (
             <p>No se consigue ese producto</p>
          ) : (
@@ -31,6 +32,13 @@ function ProductCard({ numToShow }) {
                         ${product.PrecioVentaBruto}
                         <span className="iva_color ps-1">IVA INCLUIDO</span>
                      </span>
+                </div>
+               <div className="btn-agregar pt-3">
+                  <div>
+                     <button onClick={() => buyProducts(product)} className="product-card-button">
+                        Agregar al Carrito
+                     </button>
+
                   </div>
                   <div className="btn-agregar pt-3">
                      <div>

@@ -40,7 +40,7 @@ const VistaProductosFiltrados = () => {
                   </div>
                   <div className="btn-agregar pt-3">
                      <div>
-                        <button onClick={() => buyProducts(product)} className="product-card-button">
+                        <button onClick={() => buyProducts({ ...product, quantity: 1 })} className="product-card-button">
                            Agregar al Carrito
                         </button>
                      </div>
