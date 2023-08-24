@@ -23,7 +23,8 @@ function Register() {
   });
 
   return (
-    <div className="register-form">
+    <div className="register">
+    <div className="register-form-2">
       {
         registerErrors.map((error, i) => (
           <div key={i}>
@@ -32,32 +33,36 @@ function Register() {
         ))
       }
       <form onSubmit={onSubmit}>
-        <div>
+        <div className="labell-jd">
+          <h3>Regítrate</h3>
           <input
             type="text"
-            placeholder="username"
+            placeholder="Username"
             {...register("username", { required: true })}
           />
           {errors.username && <p className="input-err">Username is required</p>}
         </div>
-        <div>
+        <div className="labell-jd">
           <input
             type="email"
-            placeholder="email"
+            placeholder="Email"
             {...register("email", { required: true })}
           />
           {errors.email && <p className="input-err">Email is required</p>}
         </div>
-        <div>
+        <div className="labell-jd">
           <input
             type="password"
-            placeholder="password"
+            placeholder="Password"
             {...register("password", { required: true })}
           />
           {errors.password && <p className="input-err">Password is required</p>}
         </div>
-        <button type="submit">Registrarse</button>
+      
+        <button type="submit" className="but-dl">Registrarse</button>
+        
       </form>
+    </div>
     </div>
   );
 }
