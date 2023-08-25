@@ -6,15 +6,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import Logo from "../../img/logo.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../../Context/MyContext";
-import { Link } from "react-router-dom";
+import TotalItems from "../../pages/shoppingCart/TotalItems";
 
 function Nav() {
    const [isOpen, setIsOpen] = useState(false);
    const [isScrolling, setIsScrolling] = useState(false);
-   const { setSearchQuery, lstCategoria, setProductosMostrados, products } = useContext(MyContext);
+   const { setSearchQuery, lstCategoria, setProductosMostrados, products, cart } = useContext(MyContext);
    const [inputValue, setInputValue] = useState("");
    const navigate = useNavigate();
 
@@ -61,6 +61,9 @@ function Nav() {
          <div className="mega-navbar-block-0">
             <div className="container">
                <div className="mega-navbar-block-0-1">
+                     <Link to="/admin">
+                        <samp>Dashboard</samp>
+                     </Link>
                   <div>
                      <PinDropIcon />
                      <samp>Sucursales</samp>
@@ -97,8 +100,15 @@ function Nav() {
                   </div>
 
                   <div className="mega-navbar-block-1-2">
-                     <input type="button" value="Ingresar" />
-                     <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
+                     <Link to="/login">
+                        <input type="button" value="Ingresar" />
+                     </Link>
+                     <Link className="seeCarrito" to={"/carrito2"}>
+                        <ShoppingCartIcon htmlColor="black" fontSize="large" className="cart-icon" />
+
+                        {cart.length > 0 ? <TotalItems /> : null}
+
+                     </Link>
                   </div>
                </div>
             </div>
@@ -109,31 +119,31 @@ function Nav() {
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}
                      onSelect={handleSelect}>
-                     <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                     <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                            </ul>
                         </div>
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[0]}`}>{lstCategoria[0]}</Link>
                               </li>
                            </ul>
                         </div>
@@ -143,31 +153,31 @@ function Nav() {
                      className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}>
-                     <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                     <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                            </ul>
                         </div>
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[1]}`}>{lstCategoria[1]}</Link>
                               </li>
                            </ul>
                         </div>
@@ -177,31 +187,31 @@ function Nav() {
                      className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}>
-                     <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                     <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                            </ul>
                         </div>
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[2]}`}>{lstCategoria[2]}</Link>
                               </li>
                            </ul>
                         </div>
@@ -211,31 +221,31 @@ function Nav() {
                      className={`mega-navbar-dropdown ${isOpen ? "active" : ""}`}
                      onMouseEnter={toggleDropdown}
                      onMouseLeave={toggleDropdown}>
-                     <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                     <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                      <div className="mega-navbar-dropdown-content">
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                            </ul>
                         </div>
                         <div className="mega-navbar-dropdown-column">
                            <ul>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                               <li>
-                                 <a href={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</a>
+                                 <Link to={`/productos-filtrados/${lstCategoria[3]}`}>{lstCategoria[3]}</Link>
                               </li>
                            </ul>
                         </div>

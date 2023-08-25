@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ShoppingCart.css";
 import imgCarrito from "../../img/productcarrito.png";
+import { useContext } from "react";
+import MyContext from "../../Context/MyContext";
 
 const ShoppingCart = () => {
+   const { cart } = useContext(MyContext);
+
    return (
       <div className="container">
          <div className="pt-2">

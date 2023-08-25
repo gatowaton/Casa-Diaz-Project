@@ -29,8 +29,12 @@ import Registro from "./pages/Registro/Registro";
 import Btnws from "./components/btnws/Btnws";
 import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
 
+import CartElements from "./pages/shoppingCart/CartElements";
+import CartContent from "./pages/shoppingCart/CartContent";
+import ProtectedRoute from "./ProtectedRoute";
 
-emailjs.init("xMUu3Z8O9QKDWSVeO");
+
+emailjs.init(process.env.REACT_APP_EMAIL);
 
 function App() {
    return (
@@ -39,22 +43,30 @@ function App() {
             <Nav />
             <Routes> 
                <Route path="/" element={<Home />} />
-               <Route path="register" element={<Register />} />
-               <Route path="login" element={<Login />} />
+               <Route path="/register" element={<Register />} />
+               <Route path="/login" element={<Login />} />
                <Route path="/carrito" element={<ShoppingCart />} />
                <Route path="/empresa" element={<Company />} />
-               <Route path="/admin" element={<Dashboard />} />
-               <Route path="/usuario" element={<UserInfo />} />
                <Route path="/contacto" element={<Contact />} />
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
                <Route path="/productos" element={<VistaProductos />} />
-               <Route path="/paginapago" element={<PaginaPago />} />
-              
+               <Route path="/paginapago" element={<PaginaPago />} /> 
                <Route path="/despachoretiro" element={<DespachoRetiro/>} />
                <Route path="/iniciosesion" element={<InicioSesion/>}/>
                <Route path="/registro" element={<Registro/>} />
                <Route path="/productDetails/:id" element={<ProductView />} />
                <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
+               <Route path="/productDetails/:id" element={<ProductView/>}/>
+               <Route path="/elementoscart" element={<CartElements/>}/>
+               <Route path="/carrito2" element={<CartContent/>}/>
+               
+               <Route element={<ProtectedRoute/>}>
+               <Route path="/user" element={<UserInfo/>} />
+               <Route path="/admin" element={<Dashboard />} />
+               </Route>
+
+
+
             </Routes>
             <Btnws />
             <Footer />

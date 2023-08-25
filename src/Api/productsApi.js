@@ -1,1 +1,0 @@
-export const getProduct = async (id) => axios.get(`/products/${id}`);

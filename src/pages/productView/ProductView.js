@@ -9,15 +9,15 @@ import MyContext from "../../Context/MyContext";
 import "./ProductView.css";
 
 function ProductView() {
-   const { products } = useContext(MyContext);
+   const { products, buyProducts} = useContext(MyContext);
    const { id } = useParams();
    const [product, setProduct] = useState(null);
    const [preferenceId, setPreferenceId] = useState(null);
-   initMercadoPago("TEST-8403fea5-6eca-494d-b3ff-69b7b93aac22");
+   initMercadoPago(process.env.REACT_APP_MERCADO_FRONT);
 
    const createPreference = async (product) => {
       try {
-         const response = await axios.post("http://localhost:4000/api/create-order", {
+         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/create-order`, {
             description: product.Titulo,
             price: product.PrecioVentaBruto,
             quantity: 1,
@@ -41,7 +41,7 @@ function ProductView() {
       // Fetch the product details using the productId
       const fetchProductDetails = async () => {
          try {
-            const response = await axios.get(`http://localhost:4000/api/product/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/product/${id}`);
             setProduct(response.data);
             console.log(response.data);
          } catch (error) {
@@ -56,12 +56,16 @@ function ProductView() {
       <div className="container pb-4">
          {product ? (
             <div>
-               <p className="pt-2">
+               <p className="pt-1">
                   {" "}
                   <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                      Inicio
                   </Link>{" "}
-                  / {product.Categoria} / {product.Titulo}
+                  /{" "}
+                  <Link to={`/productos-filtrados/${product.Categoria}`} style={{ color: "black", textDecoration: "none" }}>
+                     {product.Categoria}
+                  </Link>{" "}
+                  / {product.Titulo}
                </p>
                <div className="row pb-4">
                   <div className="col-5">
@@ -79,7 +83,7 @@ function ProductView() {
                            <input type="Number" min={0} />
                         </div>
                         <div className="px-1">
-                           <button className="product-card-button ">Agregar al Carrito</button>
+                           <button onClick={() => buyProducts(product)} className="product-card-button ">Agregar al Carrito</button>
                         </div>
                         <div>
                            <button onClick={() => handleBuy(product)} className="product-card-button">

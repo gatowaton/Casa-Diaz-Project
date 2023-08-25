@@ -10,10 +10,11 @@ function Register() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/");
-    }
-  }, [isAuthenticated, navigate]); // Agrega navigate al arreglo de dependencias
+
+    if (isAuthenticated) navigate("/")
+  }, [isAuthenticated, navigate])
+  
+
 
   const onSubmit = handleSubmit(async (values) => {
     signup(values);

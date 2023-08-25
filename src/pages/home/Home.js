@@ -186,19 +186,19 @@ function Home() {
             <div className="row py-5">
                <div className="col-lg-4 col-md-6 col-sm-12 text-center ">
                   <i className="bi bi-box icons-size"></i>
-                  <p className=" fs-4 fw-bold ">Cambios y Devoluciones</p>
+                  <p className=" fs-4 fw-bold text-center">Cambios y Devoluciones</p>
                   <p className="fs-6 fw-bold">
                      Si tienes algún inconveniente, contáctanos en Asistencia Post Venta y Servicio Técnico.
                   </p>
                </div>
                <div className="col-lg-4 col-md-6 col-sm-12 text-center ">
                   <i className="bi bi-cash icons-size"></i>
-                  <p className=" fs-4 fw-bold">Formas de pago</p>
+                  <p className=" fs-4 fw-bold text-center">Formas de pago</p>
                   <p className=" fs-6 fw-bold">Compra con tarjetas de débito o crédito vía Webpay.</p>
                </div>
                <div className="col-lg-4 col-md-6 col-sm-12 text-center">
                   <i className="bi bi-chat-left-text-fill icons-size"></i>
-                  <p className=" fs-4 fw-bold ">Asistencia</p>
+                  <p className=" fs-4 fw-bold text-center">Asistencia</p>
                   <p className=" fs-6 fw-bold ">Llámanos al +569 9999 9999 o escríbenos a casadiaz@casadiaz.cl</p>
                </div>
             </div>

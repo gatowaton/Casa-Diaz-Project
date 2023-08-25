@@ -29,6 +29,7 @@ function UserInfo() {
                         </li>
                         <li className="nav-item mis-pedidos-usuario">
                            <a className="nav-link link-mis-pedidos-usuario" href="www.google.com">
+
                               <h6 className="texto-panel-izq-cuenta">Mis pedidos</h6>
                            </a>
                         </li>

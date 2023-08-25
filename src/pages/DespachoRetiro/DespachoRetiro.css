@@ -1,20 +1,19 @@
-
-h1{
-    text-align: justify;
-    margin: 8px;
+h1 {
+   text-align: justify;
+   margin: 8px;
 }
 
-p{
-    text-align: justify;
-    margin: 8px;
-    font-size: 19px;
+p {
+   text-align: justify;
+   margin: 8px;
+   font-size: 19px;
 }
 
 .cont-d {
-    text-align: justify;
-    margin: 2em;
+   text-align: justify;
+   margin: 2em;
 }
- .cont-r {
-    text-align: justify;
-    margin: 2em;
- }
+.cont-r {
+   text-align: justify;
+   margin: 2em;
+}

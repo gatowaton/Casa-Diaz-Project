@@ -5,7 +5,7 @@
 
 .mega-navbar-block-0 {
    background-color: #2e3532;
-   height: 50px;
+   height: 40px;
    display: flex;
 
    & .mega-navbar-block-0-1 {
@@ -42,7 +42,7 @@
    padding: 5px;
    & img {
       display: flex;
-      width: 280px;
+      width: 220px;
    }
 }
 .nav-input-container {
@@ -67,12 +67,11 @@
    & input {
       background-color: #facd03;
       color: white;
-      margin: auto 1em;
-      width: 7em;
-      padding: 6px;
+      margin: auto 0.5em;
+      width: 6em;
       border-radius: 20px;
-      font-weight: bold;
-      border: 2px solid rgb(0, 0, 0);
+      font-weight: medium;
+      border: 1px solid rgb(0, 0, 0);
    }
    & input:hover {
       color: #000;
