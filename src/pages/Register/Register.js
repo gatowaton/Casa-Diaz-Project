@@ -20,8 +20,6 @@ function Register() {
   });
 
   return (
-<<<<<<< HEAD
-    <div className="register">
     <div className="register-form-2">
       {
         registerErrors.map((error, i) => (
@@ -29,41 +27,40 @@ function Register() {
             {error}
           </div>
         ))
-      }
-=======
-    <div className="register-form">
+      }     
+
+    <div className="register">
       {registerErrors.map((error, i) => (
         <div key={i}>{error}</div>
       ))}
->>>>>>> 6ac9c0df95d2f5d49f97d1253028d381fcb7a539
       <form onSubmit={onSubmit}>
         <div className="labell-jd">
-          <h3>Regítrate</h3>
+          <h3>Regítrate aquí</h3>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Nombre del usuario"
             {...register("username", { required: true })}
           />
-          {errors.username && <p className="input-err">Username is required</p>}
+          {errors.username && <p className="input-err">Usuario requerido</p>}
         </div>
         <div className="labell-jd">
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Correo"
             {...register("email", { required: true })}
           />
-          {errors.email && <p className="input-err">Email is required</p>}
+          {errors.email && <p className="input-err">Correo requerido</p>}
         </div>
         <div className="labell-jd">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             {...register("password", { required: true })}
           />
-          {errors.password && <p className="input-err">Password is required</p>}
+          {errors.password && <p className="input-err">Contraseña requerida</p>}
         </div>
       
-        <button type="submit" className="but-dl">Registrarse</button>
+        <button type="submit" className="but-dl" href="/Home">Registrarse</button>
         
       </form>
     </div>

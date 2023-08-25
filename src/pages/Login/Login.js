@@ -18,22 +18,22 @@ function Login() {
     <div className="container-md-nn">
     <div className="register-form">
       <form onSubmit={onSubmit}>
-      <h3>Ingresa</h3>
+      <h3>Ingresa a tu cuenta</h3>
         <div className='input-ll'>
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Correo"
             {...register("email", { required: true })}
           />
-          {errors.email && <p className="input-err">Email is required</p>}
+          {errors.email && <p className="input-err">El correo es requerido</p>}
         </div>
         <div className='input-ll'>
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             {...register("password", { required: true })}
           />
-          {errors.password && <p className="input-err">Password is required</p>}
+          {errors.password && <p className="input-err">La contraseña es requerida</p>}
         </div>
         
         <button type="submit" className='button-ls'>Login</button>

@@ -1,16 +1,17 @@
-/* .container {
-    margin: auto;
-    margin-top: 16mm;    
+/* 
+.container-oo {
+    background: rgb(221, 218, 218);
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 2em;
+    border-radius: 5px;   
 }
 
-.row.g-3{
-    background-color: rgb(174, 173, 173);
-    border-radius: 5px;
-    padding: 5mm;
-}
+
+
 
 h1{
-    text-align: justify;
+    text-align: center;
     margin: 20mm;
     padding: 10mm;
-} */
+}  */
