@@ -16,7 +16,7 @@ router.get("/product", getProducts)
 
 router.get("/product/:id", getProduct)
 
-router.post("/", createProduct)
+router.post("/product", createProduct)
 
 router.delete("/products/:id", authRequire, deleteProduct)
 

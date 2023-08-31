@@ -21,7 +21,7 @@ function ProductCreator({ onProductCreated }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/product/', product);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/product/`, product);
       console.log('Product created successfully!');
       onProductCreated(response.data);
       setProduct({
