@@ -1,5 +1,5 @@
 const {Router} = require("express");
-const { createOrder } = require("../controllers/paymentController");
+const { createOrder,receiveWebhook } = require("../controllers/paymentController");
 
 const router = Router()
 

@@ -10,7 +10,6 @@ import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Dashboard from "./pages/admin/Dashboard";
 import Footer from "./components/footer/Footer";
-import ShoppingCart from "./pages/shoppingCart/ShoppingCart";
 import Company from "./pages/Company/Company";
 import UserInfo from "./pages/user/UserInfo";
 import Contact from "./pages/contact/Contact";
@@ -45,7 +44,6 @@ function App() {
                <Route path="/" element={<Home />} />
                <Route path="/register" element={<Register />} />
                <Route path="/login" element={<Login />} />
-               <Route path="/carrito" element={<ShoppingCart />} />
                <Route path="/empresa" element={<Company />} />
                <Route path="/contacto" element={<Contact />} />
                <Route path="/cambiosdevoluciones" element={<CambiosDevoluciones />} />
@@ -58,7 +56,7 @@ function App() {
                <Route path="/productos-filtrados/:Categoria" element={<VistaProductosFiltrados />} />
                <Route path="/productDetails/:id" element={<ProductView/>}/>
                <Route path="/elementoscart" element={<CartElements/>}/>
-               <Route path="/carrito2" element={<CartContent/>}/>
+               <Route path="/carrito" element={<CartContent/>}/>
                
                <Route element={<ProtectedRoute/>}>
                <Route path="/user" element={<UserInfo/>} />
