@@ -3,12 +3,12 @@ import axios from 'axios';
 
 function ProductCreator({ onProductCreated }) {
   const [product, setProduct] = useState({
-    title: '',
-    description: '',
-    price: 0,
-    image: '',
-    brand: '',
-    stock: 0
+    Titulo: '',
+    Categoria: '',
+    PrecioVentaBruto: 0,
+    Foto: '',
+    Marca: '',
+    Stock: 0
   });
 
   const handleChange = (e) => {
@@ -25,12 +25,12 @@ function ProductCreator({ onProductCreated }) {
       console.log('Product created successfully!');
       onProductCreated(response.data);
       setProduct({
-        title: '',
-        description: '',
-        price: 0,
-        image: '',
-        brand: '',
-        stock: 0
+        Titulo: '',
+        Categoria: '',
+        PrecioVentaBruto: 0,
+        Foto: '',
+        Marca: '',
+        Stock: 0
       });
     } catch (error) {
       console.error(error);
@@ -43,61 +43,61 @@ function ProductCreator({ onProductCreated }) {
       <h1>Create Product</h1>
       <form className='product-creator-form' onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="title">Title:</label><br/>
+          <label htmlFor="Titulo">Title:</label><br/>
           <input
             type="text"
-            id="title"
-            name="title"
-            value={product.title}
+            id="Titulo"
+            name="Titulo"
+            value={product.Titulo}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="description">Description:</label><br/>
+          <label htmlFor="Categoria">Categoria:</label><br/>
           <textarea
-            id="description"
-            name="description"
-            value={product.description}
+            id="Categoria"
+            name="Categoria"
+            value={product.Categoria}
             onChange={handleChange}
           ></textarea>
         </div>
         <div>
-          <label htmlFor="price">Price:</label><br/>
+          <label htmlFor="PrecioVentaBruto">PrecioVentaBruto:</label><br/>
           <input
             type="number"
-            id="price"
-            name="price"
-            value={product.price}
+            id="PrecioVentaBruto"
+            name="PrecioVentaBruto"
+            value={product.PrecioVentaBruto}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="image">Image URL:</label><br/>
+          <label htmlFor="Foto">Image URL:</label><br/>
           <input
             type="text"
-            id="image"
-            name="image"
-            value={product.image}
+            id="Foto"
+            name="Foto"
+            value={product.Foto}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="brand">Brand:</label><br/>
+          <label htmlFor="Marca">Marca:</label><br/>
           <input
             type="text"
-            id="brand"
-            name="brand"
-            value={product.brand}
+            id="Marca"
+            name="Marca"
+            value={product.Marca}
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="stock">Stock:</label><br/>
+          <label htmlFor="Stock">Stock:</label><br/>
           <input
             type="number"
-            id="stock"
-            name="stock"
-            value={product.stock}
+            id="Stock"
+            name="Stock"
+            value={product.Stock}
             onChange={handleChange}
           />
         </div>

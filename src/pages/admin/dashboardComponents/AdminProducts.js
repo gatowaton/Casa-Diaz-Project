@@ -29,7 +29,7 @@ function AdminProducts() {
       <h1>Products</h1>
       <div className='product-card-admin-container'>
         {products.map(product => (
-          <div className='product-card-admin' key={product.id}>
+          <div className='product-card-admin' key={product._id}>
             <img src={product.Foto} alt="" />
             <div>
               <h2>{product.Titulo}</h2>
