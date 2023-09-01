@@ -3,7 +3,7 @@ const { createOrder, receiveWebhook } = require("../controllers/paymentControlle
 
 const router = Router()
 
-router.post("/create-order", createOrder)
+router.post("/create-preference", createOrder);
 
 router.get("/success", (req, res)=> res.send("success"))
 
