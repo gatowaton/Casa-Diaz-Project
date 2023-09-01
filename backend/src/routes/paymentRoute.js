@@ -1,5 +1,5 @@
 const {Router} = require("express");
-const { createOrder,receiveWebhook } = require("../controllers/paymentController");
+const { createOrder, receiveWebhook } = require("../controllers/paymentController");
 
 const router = Router()
 
@@ -11,7 +11,7 @@ router.get("/failure", (req, res)=> res.send("failure"))
 
 router.get("/pending", (req, res)=> res.send("pending"))
 
-router.get("/webhook",)
+router.get("/webhook", receiveWebhook)
 
 
 module.exports = router

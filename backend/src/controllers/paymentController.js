@@ -3,7 +3,7 @@ const mercadopago = require("mercadopago")
 const createOrder = async (req, res) => {
 
     mercadopago.configure({
-        access_token:"TEST-8878962139061488-080815-0851094a71cbd65c94ab458a0b6f56f7-1444620939",   
+        access_token: process.env.MERCADO_BACK,   
     })
 
     const products = req.body.products;
