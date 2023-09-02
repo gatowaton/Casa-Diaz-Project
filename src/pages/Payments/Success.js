@@ -10,7 +10,7 @@ function Success() {
       <div className='success-box'>
         <h1>Gracias por su compra</h1>
         <img src={casaLogo} alt={casaLogo} />
-        <Link to="/">
+        <Link to="./">
           <button className="button-40">Volver al Home</button>
         </Link>
       </div>

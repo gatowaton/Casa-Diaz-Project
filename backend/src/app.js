@@ -18,7 +18,7 @@ app.set("port", process.env.PORT || 4000);
 //cada vez que llegue una peticion a mi sv va a poder enviar y recibir datos
 app.use(
    cors({
-      origin: process.env.FRONTEND_URL,
+      origin: "*",
       credentials: true,
    })
 );
