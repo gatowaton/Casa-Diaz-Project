@@ -1,46 +1,121 @@
+.cart-page{
+   margin: 2em;
+}
+.cart-container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-color: #cad1d4;
+   justify-content: space-between;
+   border-radius: 20px;
+}
+
 .box-cart {
     background-color: #cad1d4;
-    width: 54rem;
-    height: auto;
     border-radius: 25px;
     padding: 1.5em;
+    margin: 0;
  }
+ 
+ .box-cart-desc{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   gap: 10px;
+ }
+
+ .product-item-container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 1em 0;
+   border: solid 1px grey;
+   border-radius: 20px;
+   padding: 0 0.3em;
+ }
+
+ .product-item-container-block-1{
+   display: flex;
+   flex-direction: row;
+ }
+
+ .product-item-img img{
+   border-radius: 20px;
+   width: 5em;
+   margin: 0.5em;
+ }
+ .product-item-desc{
+   margin: 0.5em;
+ }
+
+ .delete-product-btn{
+   background: transparent;
+   border: none;
+ }
+ 
+
  .box-cart-result {
     background-color: #cad1d4;
-    width: 23rem;
- 
-    border-radius: 25px;
-    padding-bottom: 1em;
- }
- .product-quantity input {
-    width: 3rem;
-    height: 3rem;
-    align-items: center;
+    width: 25em;
+    height: 20em;
+    margin: auto;
+    border: solid 1px grey;
+    border-radius: 20px;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: 500;
     text-align: center;
-    border-radius: 10px;
-    border: none;
-    background-color: #d9d9d9;
-    font-size: 1.2em;
-    border: solid 0.1px;
  }
- .btn-cart-delete,
- .btn-cart-act {
-    background-color: #5d6463;
-    color: white;
-    border-radius: 10px;
-    border: solid 1px black;
-    height: 2rem;
+
+ .box-cart-result button{
+   justify-content: center;
+
  }
- 
- .btn-cotizar,
- .btn-pay {
-    background-color: #5d6463;
-    color: white;
-    border-radius: 10px;
-    border: solid 1px black;
-    height: 2.5rem;
-    width: 100%;
- }
+
+
+/* CSS */
+.button-40 {
+   margin-top: 1em;
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+
 
 
  

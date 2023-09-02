@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import { Link } from "react-router-dom";
 import ProductCard from "../../components/productCard/ProductCard";
 import MyContext from "../../Context/MyContext";
@@ -11,31 +10,7 @@ import "./ProductView.css";
 function ProductView() {
    const { products, buyProducts} = useContext(MyContext);
    const { id } = useParams();
-   const [product, setProduct] = useState(null);
-   const [preferenceId, setPreferenceId] = useState(null);
-   initMercadoPago(process.env.REACT_APP_MERCADO_FRONT);
-
-   const createPreference = async (product) => {
-      try {
-         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/create-order`, {
-            description: product.Titulo,
-            price: product.PrecioVentaBruto,
-            quantity: 1,
-            picture_url: product.Foto,
-         });
-         const { id } = response.data;
-         return id;
-      } catch (error) {
-         console.log(error);
-      }
-   };
-
-   const handleBuy = async (product) => {
-      const id = await createPreference(product);
-      if (id) {
-         setPreferenceId(id);
-      }
-   };
+   const [product, setProduct] = useState(null);;
 
    useEffect(() => {
       // Fetch the product details using the productId
@@ -79,19 +54,13 @@ function ProductView() {
                         <span className="iva_color ps-1">IVA INCLUIDO</span>
                      </div>
                      <div className="d-flex align-items-center">
-                        <div class="product-quantity px-2">
+                        <div className="product-quantity px-2">
                            <input type="Number" min={0} />
                         </div>
                         <div className="px-1">
                            <button onClick={() => buyProducts(product)} className="product-card-button ">Agregar al Carrito</button>
                         </div>
-                        <div>
-                           <button onClick={() => handleBuy(product)} className="product-card-button">
-                              Comprar
-                           </button>
-                        </div>
                      </div>
-                     {preferenceId && <Wallet initialization={{ preferenceId }} />}
                   </div>
                </div>
                <div></div>

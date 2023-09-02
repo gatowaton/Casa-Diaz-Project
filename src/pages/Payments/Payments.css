@@ -1,0 +1,23 @@
+.success-page{
+    display: flex;
+}
+.success-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #7a8b99;
+    align-items: center;
+    margin: auto;
+    width: 30em;
+    margin: 5em auto;
+    padding: 3em 1em;
+    border-radius: 20px;
+}
+
+.success-box h1{
+    color: white;
+}
+
+.success-box img{
+    margin: 2em 0;
+    width: 15em;
+}

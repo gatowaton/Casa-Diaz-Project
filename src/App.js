@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
 import emailjs from "emailjs-com";
-
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Dashboard from "./pages/admin/Dashboard";
@@ -18,19 +16,17 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import { AuthProvider } from "./Context/AuthContext";
 import ProductView from "./pages/productView/ProductView";
-
 import VistaProductos from "./pages/VistaProductos/VistaProductos";
 import PaginaPago from "./pages/paginaPago/PaginaPago";
-
 import InicioSesion from "./pages/InicioSesion/InicioSesion";
 import DespachoRetiro from "./pages/DespachoRetiro/DespachoRetiro";
 import Registro from "./pages/Registro/Registro";
 import Btnws from "./components/btnws/Btnws";
 import VistaProductosFiltrados from "./pages/vistaProductosFiltrados/VistaProductosFiltrados";
-
 import CartElements from "./pages/shoppingCart/CartElements";
 import CartContent from "./pages/shoppingCart/CartContent";
 import ProtectedRoute from "./ProtectedRoute";
+import Success from "./pages/Payments/Success";
 
 
 emailjs.init(process.env.REACT_APP_EMAIL);
@@ -57,7 +53,7 @@ function App() {
                <Route path="/productDetails/:id" element={<ProductView/>}/>
                <Route path="/elementoscart" element={<CartElements/>}/>
                <Route path="/carrito" element={<CartContent/>}/>
-               
+               <Route path="/success" element={<Success/>}/>
                <Route element={<ProtectedRoute/>}>
                <Route path="/user" element={<UserInfo/>} />
                <Route path="/admin" element={<Dashboard />} />
