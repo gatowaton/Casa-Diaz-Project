@@ -35,8 +35,9 @@ function App() {
    return (
       <AuthProvider>
          <BrowserRouter>
-            <NavResponsive/>
-            <Routes> 
+            <Nav />
+            <NavResponsive />
+            <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/register" element={<Register />} />
                <Route path="/login" element={<Login />} />
