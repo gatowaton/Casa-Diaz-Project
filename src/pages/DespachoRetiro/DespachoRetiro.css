@@ -1,20 +1,8 @@
 .jumbotron {
    margin: 1em;
    background-size: cover;
-   color: white;
+   color: black;
 }
-
-h1 {
-   text-align: justify;
-   margin: 8px;
-}
-
-p {
-   text-align: justify;
-   margin: 8px;
-   font-size: 19px;
-}
-
 .cont-d {
    text-align: justify;
    margin: 2em;

@@ -17,22 +17,28 @@ const InicioSesion = ({ handleLogin }) => {
          <h1>Inicio de Sesion</h1>
          <div className="container-lg">
             <div className="row mt-5">
-               <div className="col-lg-6">
+               <div className="col-lg-6 ini ">
                   <h2>Ingresar</h2>
-                  <h4>Si ya tienes una cuenta, inicia sesión con tu correo</h4>
+                  <h4 className="H-inicio">Si ya tienes una cuenta, inicia sesión con tu correo</h4>
 
                   <form onSubmit={handleSubmit}>
-                     <label For="email">Correo electronico</label>
+                     <label className="labelInicio" For="email">
+                        Correo electronico
+                     </label>
 
                      <input
+                        className="inputInicio"
                         type="text"
                         placeholder="Introduce tu correo"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}></input>
 
-                     <label For="password">Contraseña</label>
+                     <label className="labelInicio" For="password">
+                        Contraseña
+                     </label>
 
                      <input
+                        className="inputInicio"
                         type="password"
                         placeholder="Introduce tu contraseña"
                         value={password}
@@ -51,7 +57,7 @@ const InicioSesion = ({ handleLogin }) => {
                <div className="col-lg-6">
                   <h2>Crea tu cuenta de cliente</h2>
 
-                  <h4>
+                  <h4 className="H-inicio">
                      Registrate para poder realizar compras en nuestra tienda online, hacer seguimiento de tus compras,
                      revisar nuetras ofertas y mucho más.
                   </h4>
