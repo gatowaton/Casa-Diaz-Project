@@ -1,5 +1,7 @@
 .cart-page{
-   margin: 2em;
+   margin: 0;
+   padding-left: 1em;
+   padding-right: 1em;
 }
 .cart-container{
    display: flex;

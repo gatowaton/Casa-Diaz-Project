@@ -153,3 +153,10 @@
    color: #fff;
    text-decoration: none;
 }
+
+@media (max-width: 1000px) {
+   .mega-navbar{
+       display: none;
+   }
+ }
+

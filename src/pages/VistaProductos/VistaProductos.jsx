@@ -7,8 +7,8 @@ const VistaProductos = () => {
 
    return (
       <div>
-         <div className="container">
-            <p>El resultado de la búsqueda es:</p>
+         <div className="container container-margin">
+            <p className="ruta-page">El resultado de la búsqueda es:</p>
             {searchQuery !== "" ? <ProductCard products={searchQuery} /> : <p>No se ha especificado una búsqueda.</p>}
          </div>
       </div>

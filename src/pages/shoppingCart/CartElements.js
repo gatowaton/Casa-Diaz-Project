@@ -6,11 +6,11 @@ import "./ShoppingCart.css";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import "./CartElements.css";
 
 const ShoppingCart = () => {
-  const { cart, setCart, total} = useContext(MyContext);
+  const { cart, setCart, total } = useContext(MyContext);
 
   const [preferenceId, setPreferenceId] = useState(null);
 
@@ -55,18 +55,19 @@ const ShoppingCart = () => {
   const totalSinIva = total - iva;
 
   return (
-    <div className="cart-page">
-      <div className="pt-2">
+    <div className="cart-page container-margin">
+      <div className="pt-2 ruta-page">
         <Link to="/" style={{ color: "black", textDecoration: "none" }}>
           Inicio
         </Link>{" "}
         / Carro de compras
       </div>
+
       <h2>Carro de compras</h2>
       <div className="box-cart-desc">
-            <h4>{cart.length}</h4>
-            <h4>Productos en el carro de compras</h4>
-          </div>
+        <h4>{cart.length}</h4>
+        <h4>Productos en el carro de compras</h4>
+      </div>
       <div className="cart-container">
         <div className="box-cart">
           <div className="product-list">
@@ -91,32 +92,33 @@ const ShoppingCart = () => {
               </div>
             ))}
           </div>
-
         </div>
         <div className="box-cart-result">
-            <h5 className="p-2">RESUMEN DE COMPRA</h5>
-            <div className="d-flex justify-content-between">
-              <div className="">Impuestos</div>
-              <div className="">${iva}</div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between">
-              <div className="">Total sin IVA</div>
-              <div className="">${totalSinIva}</div>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between">
-              <div className="">Total con IVA</div>
-              <div className="">${total}</div>
-            </div>
-            {/* Botón de pago */}
-            <button className="button-40" onClick={() => handleBuy()}>Continuar al pago <AttachMoneyIcon/></button>
-            {preferenceId && (
-              <div>
-                <Wallet initialization={{ preferenceId }} />
-              </div>
-            )}
+          <h5 className="p-2">RESUMEN DE COMPRA</h5>
+          <div className="d-flex justify-content-between">
+            <div className="">Impuestos</div>
+            <div className="">${iva}</div>
           </div>
+          <hr />
+          <div className="d-flex justify-content-between">
+            <div className="">Total sin IVA</div>
+            <div className="">${totalSinIva}</div>
+          </div>
+          <hr />
+          <div className="d-flex justify-content-between">
+            <div className="">Total con IVA</div>
+            <div className="">${total}</div>
+          </div>
+          {/* Botón de pago */}
+          <button className="button-40" onClick={() => handleBuy()}>
+            Continuar al pago <AttachMoneyIcon />
+          </button>
+          {preferenceId && (
+            <div>
+              <Wallet initialization={{ preferenceId }} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

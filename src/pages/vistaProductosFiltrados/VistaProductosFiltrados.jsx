@@ -17,8 +17,8 @@ const VistaProductosFiltrados = () => {
    };
 
    return (
-      <div className="container">
-         <p className="pt-2">
+      <div className="container .container-margin">
+         <p className="pt-2 ruta-page">
             {" "}
             <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                Inicio
