@@ -1,16 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ProductCard from "../../components/productCard/ProductCard";
 import MyContext from "../../Context/MyContext";
 
 import "./ProductView.css";
 
 function ProductView() {
-   const { products, buyProducts} = useContext(MyContext);
+   const { products, buyProducts } = useContext(MyContext);
    const { id } = useParams();
-   const [product, setProduct] = useState(null);;
+   const [product, setProduct] = useState(null);
 
    useEffect(() => {
       // Fetch the product details using the productId
@@ -43,10 +42,10 @@ function ProductView() {
                   / {product.Titulo}
                </p>
                <div className="row pb-4">
-                  <div className="col-5">
+                  <div className="col-lg-5 col-sm-12">
                      <img className="img-thumbnail img-size" src={product.Foto} alt={product.Titulo} />
                   </div>
-                  <div className="col-7 pt-4">
+                  <div className="col-lg-7 col-sm-12 pt-4">
                      <h6>SKU {product.CodigoProducto}</h6>
                      <h2 className="pt-3">{product.Titulo}</h2>
                      <div className="product-card-price-detail pt-3">
@@ -58,13 +57,15 @@ function ProductView() {
                            <input type="Number" min={0} />
                         </div>
                         <div className="px-1">
-                           <button onClick={() => buyProducts(product)} className="product-card-button ">Agregar al Carrito</button>
+                           <button onClick={() => buyProducts(product)} className="product-card-button ">
+                              Agregar al Carrito
+                           </button>
                         </div>
                      </div>
                   </div>
                </div>
                <div></div>
-               <h4>Quienes compraron este producto tambien compraron</h4>
+               <h4 className="pt-3">Quienes compraron este producto tambien compraron</h4>
                <ProductCard products={products} numToShow={4} />
             </div>
          ) : (
