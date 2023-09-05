@@ -1,6 +1,25 @@
-.register-link{
-    color: black;
-    & strong{
-        color: black;
-    }
+.register-link {
+   color: black;
+   & strong {
+      color: black;
+   }
+}
+.btn-inicio {
+   background-color: #facd03;
+   color: black;
+   border-radius: 20px;
+   border-style: none;
+   width: auto;
+}
+
+.inicioForm {
+   display: flex;
+   justify-content: center;
+}
+.input-ini {
+   width: 20rem;
+   height: 2rem;
+   border-radius: 20px;
+   border-style: none;
+   padding-left: 5px;
 }

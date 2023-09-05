@@ -4,6 +4,9 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+   const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+   };
    return (
       <footer>
          <div className="section_footer">
@@ -20,25 +23,37 @@ const Footer = () => {
                      <p className="text-center fs-4 fw-bold text-light">Clientes</p>
                      <ul>
                         <li className="fs-5 text-light">
-                           <Link to={`/register`}>Registrate</Link>
+                           <Link to={`/register`} onClick={scrollToTop}>
+                              Registrate
+                           </Link>
                         </li>
                         <li className="fs-5 text-light">
-                           <Link to={`/cambiosdevoluciones`}>Cambios y devolucions</Link>
+                           <Link to={`/cambiosdevoluciones`} onClick={scrollToTop}>
+                              Cambios y devolucions
+                           </Link>
                         </li>
                         <li className="fs-5 text-light">
-                           <Link to={`/despachoretiro`}>Despacho y retiro</Link>
+                           <Link to={`/despachoretiro`} onClick={scrollToTop}>
+                              Despacho y retiro
+                           </Link>
                         </li>
-                        <li className="fs-5 text-light">Terminos y condiciones</li>
+                        <li className="fs-5 text-light" onClick={scrollToTop}>
+                           Terminos y condiciones
+                        </li>
                      </ul>
                   </div>
                   <div className="col-md-4 col-sm-12">
                      <p className="text-center fs-4 fw-bold text-light">Empresa</p>
                      <ul>
                         <li className="fs-5 text-light">
-                           <Link to={`/empresa`}>Nuestra empresa</Link>
+                           <Link to={`/empresa`} onClick={scrollToTop}>
+                              Nuestra empresa
+                           </Link>
                         </li>
                         <li className="fs-5 text-light">
-                           <Link to={`/contacto`}>Contactanos</Link>
+                           <Link to={`/contacto`} onClick={scrollToTop}>
+                              Contactanos
+                           </Link>
                         </li>
                      </ul>
                   </div>

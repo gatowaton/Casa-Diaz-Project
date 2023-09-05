@@ -155,8 +155,7 @@
 }
 
 @media (max-width: 1000px) {
-   .mega-navbar{
-       display: none;
+   .mega-navbar {
+      display: none;
    }
- }
-
+}

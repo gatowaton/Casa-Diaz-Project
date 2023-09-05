@@ -1,39 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-*{
-  margin: 0;
-  padding: 0;
+* {
+   margin: 0;
+   padding: 0;
 }
 
-.na{
-  background-color: red;
-  width: 1000px;
-  height: 500px;
+.na {
+   background-color: red;
+   width: 1000px;
+   height: 500px;
 }
 
-.nas{
-  background-color: green;
-  width: 1000px;
-  height: 500px;
+.nas {
+   background-color: green;
+   width: 1000px;
+   height: 500px;
 }
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 100px;
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 100px;
 }
-
-
 
 @media (max-width: 1000px) {
-  .ruta-page{
-    margin: 0;
-  }
-  
-  
-  .container-margin{
-    padding-top: 100px ;
-  }
+   .ruta-page {
+      margin: 0;
+   }
 }

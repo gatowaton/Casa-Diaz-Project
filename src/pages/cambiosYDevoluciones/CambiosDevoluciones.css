@@ -1,13 +1,12 @@
 .container-cambios-devoluciones {
-    margin-top: 50px;
-    padding: 20px;
-    margin-bottom: 50px;
+   padding: 20px;
+   margin-bottom: 50px;
 }
-  
+
 .container-cambios-devoluciones-texto p {
-    line-height: 1.5;
+   line-height: 1.5;
 }
-  
+
 .container-cambios-devoluciones-texto p {
-  text-align: justify;
+   text-align: justify;
 }
