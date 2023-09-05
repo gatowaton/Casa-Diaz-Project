@@ -27,6 +27,7 @@ import CartElements from "./pages/shoppingCart/CartElements";
 import CartContent from "./pages/shoppingCart/CartContent";
 import ProtectedRoute from "./ProtectedRoute";
 import Success from "./pages/Payments/Success";
+import NavResponsive from "./components/nav/navresponsive/NavResponsive";
 
 
 emailjs.init(process.env.REACT_APP_EMAIL);
@@ -36,6 +37,7 @@ function App() {
       <AuthProvider>
          <BrowserRouter>
             <Nav />
+            <NavResponsive/>
             <Routes> 
                <Route path="/" element={<Home />} />
                <Route path="/register" element={<Register />} />
@@ -58,9 +60,6 @@ function App() {
                <Route path="/user" element={<UserInfo/>} />
                <Route path="/admin" element={<Dashboard />} />
                </Route>
-
-
-
             </Routes>
             <Btnws />
             <Footer />

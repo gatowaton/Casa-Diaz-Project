@@ -24,3 +24,16 @@
   justify-content: center;
   margin-bottom: 100px;
 }
+
+
+
+@media (max-width: 1000px) {
+  .ruta-page{
+    margin: 0;
+  }
+  
+  
+  .container-margin{
+    padding-top: 100px ;
+  }
+}

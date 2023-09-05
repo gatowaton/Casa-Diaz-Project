@@ -28,10 +28,10 @@ function ProductView() {
    }, [id]);
 
    return (
-      <div className="container pb-4">
+      <div className="container pb-4 container-margin">
          {product ? (
             <div>
-               <p className="pt-1">
+               <p className="pt-1 ruta-page" >
                   {" "}
                   <Link to={`/`} style={{ color: "black", textDecoration: "none" }}>
                      Inicio
