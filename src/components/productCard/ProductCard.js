@@ -12,6 +12,10 @@ function ProductCard({ numToShow }) {
          ? products.filter((product) => product.Titulo.toLowerCase().includes(searchQuery.toLowerCase()))
          : products;
 
+   const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+   };
+
    return (
       <div className="product-card-container">
          {filteredProducts.length === 0 ? (
@@ -33,7 +37,7 @@ function ProductCard({ numToShow }) {
                      <button onClick={() => buyProducts(product)} className="product-card-button">
                         Agregar al Carrito
                      </button>
-                     <Link to={`/productDetails/${product._id}`}>
+                     <Link to={`/productDetails/${product._id}`} onClick={scrollToTop}>
                         <button className="product-card-button">Detalles</button>
                      </Link>
                   </div>

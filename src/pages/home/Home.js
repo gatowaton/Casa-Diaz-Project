@@ -14,6 +14,10 @@ import "./Home.css";
 function Home() {
    const { products } = useContext(MyContext);
 
+   const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+   };
+
    return (
       <div>
          <img src={bannerimg} className="img-fluid rounded mx-auto d-block p-4" alt="..."></img>
@@ -24,22 +28,22 @@ function Home() {
             <div className="section_img_filter container">
                <div className="row">
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <Link to={`/productos-filtrados/Iluminación`}>
+                     <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
                         <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
                      </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <Link to={`/productos-filtrados/Iluminación`}>
+                     <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
                         <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
                      </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <Link to={`/productos-filtrados/Iluminación`}>
+                     <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
                         <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
                      </Link>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-12">
-                     <Link to={`/productos-filtrados/Iluminación`}>
+                     <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
                         <img src={imglanding} className="rounded mx-auto d-block pb-4" alt="..."></img>
                      </Link>
                   </div>
@@ -54,7 +58,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -65,7 +71,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -76,7 +84,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -87,7 +97,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -98,7 +110,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -109,7 +123,9 @@ function Home() {
                         <div className="text-start pt-3">
                            <p className="fs-5 text-light">Toma de corriente duplex 10A 250V Blanco/Plata</p>
                            <div className="ps-4">
-                              <button className="btn_six">Ver Producto</button>
+                              <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
+                                 <button className="btn_six">Ver Producto</button>
+                              </Link>
                            </div>
                         </div>
                         <img src={imgsix} className="img-fluid rounded" alt="..."></img>
@@ -129,7 +145,7 @@ function Home() {
                         Conoce nuestra nueva linea de productos de iluminación. Encuentra plafones, Panel Led, y mucho mas.
                      </p>
                      <div className="ps-4">
-                        <Link to={`/productos-filtrados/Iluminación`}>
+                        <Link to={`/productos-filtrados/Iluminación`} onClick={scrollToTop}>
                            <button className="btn_new_line">Ver Producto</button>
                         </Link>
                      </div>

@@ -30,8 +30,8 @@
 }
 
 .carrito-responsive span {
-   transform: translate(-34px, 5px);
-   color: blue;
+   transform: translate(-30px, 5px);
+   color: black;
    border-radius: 100px;
    font-weight: 900;
 }
