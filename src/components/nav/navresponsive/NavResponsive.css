@@ -18,6 +18,22 @@
    color: white;
 }
 
+
+.block-nav{
+   display: flex;
+   flex-direction: row;
+}
+
+.nav-resp-bar-img{
+   display: flex;
+   height: 4em;
+   width: 4em;
+   margin: auto;
+   padding: auto;
+   justify-content: center;
+
+}
+
 .nav-resp-bar-zoom {
    margin: auto 0.4em;
    color: white;
@@ -36,12 +52,6 @@
    color: black;
    border-radius: 100px;
    font-weight: 900;
-   z-index: 2000;
-}
-
-.nav-resp-bar-img {
-   display: flex;
-   margin: 0;
    z-index: 2000;
 }
 

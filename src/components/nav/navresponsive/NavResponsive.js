@@ -49,11 +49,15 @@ function NavResponsive() {
                   <MenuIcon style={customIconStyle} />
                </div>
 
-               <div className="nav-resp-bar-img">
-                  <img src={logoR} alt={logoR} />
+               <Link to="./">
+               <div className="nav-resp-bar-img" >
+                  <img src={logoR} alt="logoR" />
                </div>
+               </Link>
 
-               <Link className="carrito-responsive" to="./carrito">
+
+                <div className="block-nav">
+                <Link className="carrito-responsive" to="./carrito">
                   <ShoppingCartIcon style={customIconStyle} />
                   <span>{cart.length > 0 ? <TotalItems /> : null}</span>
                </Link>
@@ -61,6 +65,8 @@ function NavResponsive() {
                <div className="nav-resp-bar-zoom" onClick={searchClick} >
                   <SearchIcon style={customIconStyle} />
                </div>
+                </div>
+
             </div>
             <div>
                <div className={clickSeach ? "nav-resp-bar-input" : "nav-resp-bar-input clicked"}>
