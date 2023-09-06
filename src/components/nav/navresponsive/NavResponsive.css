@@ -21,12 +21,14 @@
 .nav-resp-bar-zoom {
    margin: auto 0.4em;
    color: white;
+   z-index: 2000;
 }
 
 .carrito-responsive {
    margin: auto 0.1em;
    color: white;
    display: flex;
+   z-index: 2000;
 }
 
 .carrito-responsive span {
@@ -34,11 +36,13 @@
    color: black;
    border-radius: 100px;
    font-weight: 900;
+   z-index: 2000;
 }
 
 .nav-resp-bar-img {
    display: flex;
    margin: 0;
+   z-index: 2000;
 }
 
 .nav-resp-bar-input {
