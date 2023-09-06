@@ -54,12 +54,12 @@ function NavResponsive() {
                </Link>
 
                <Link className="carrito-responsive" to="./carrito">
-                  <ShoppingCartIcon style={customIconStyle} />
+                  <MenuIcon style={customIconStyle} />
                   <span>{cart.length > 0 ? <TotalItems /> : null}</span>
                </Link>
 
                <div className="nav-resp-bar-zoom" onClick={searchClick} >
-                  <SearchIcon style={customIconStyle} />
+                  <MenuIcon style={customIconStyle} />
                </div>
             </div>
             <div>
