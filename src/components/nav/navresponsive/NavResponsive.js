@@ -59,18 +59,21 @@ function NavResponsive() {
 
 
         <Link to={"./"} className="nav-resp-bar-img">
+        <div>
           <img src={logoR} alt={logoR} />
+        </div>
         </Link>
 
         <Link className="carrito-responsive" to="./carrito">
+            <div>
             <ShoppingCartIcon style={customIconStyle}/>
             <span>{cart.length > 0 ? <TotalItems /> : null}</span>
-
+            </div>
         </Link>
 
 
 
-        <div onClick={searchClick} className="nav-resp-bar-zoom">
+        <div className="nav-resp-bar-zoom" onClick={searchClick} >
           <SearchIcon style={customIconStyle} />
         </div>
       </div>
