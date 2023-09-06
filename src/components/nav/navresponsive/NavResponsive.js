@@ -58,7 +58,7 @@ function NavResponsive() {
                   <span>{cart.length > 0 ? <TotalItems /> : null}</span>
                </Link>
 
-               <div onClick={searchClick} className="nav-resp-bar-zoom">
+               <div className="nav-resp-bar-zoom" onClick={searchClick} >
                   <SearchIcon style={customIconStyle} />
                </div>
             </div>
