@@ -49,17 +49,17 @@ function NavResponsive() {
                   <MenuIcon style={customIconStyle} />
                </div>
 
-               <Link to={"./"} className="nav-resp-bar-img">
+               <div className="nav-resp-bar-img">
                   <img src={logoR} alt={logoR} />
-               </Link>
+               </div>
 
                <Link className="carrito-responsive" to="./carrito">
-                  <MenuIcon style={customIconStyle} />
+                  <ShoppingCartIcon style={customIconStyle} />
                   <span>{cart.length > 0 ? <TotalItems /> : null}</span>
                </Link>
 
                <div className="nav-resp-bar-zoom" onClick={searchClick} >
-                  <MenuIcon style={customIconStyle} />
+                  <SearchIcon style={customIconStyle} />
                </div>
             </div>
             <div>
